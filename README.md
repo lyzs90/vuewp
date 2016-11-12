@@ -2,12 +2,15 @@
 
 Basic Single Page Theme developed with WordPress REST API v2 and VueJS 2.0.
 
+## Source Code
+
+VueJS Source code is placed under `public/app/themes/vuewp/app/`
+
 ## Install Tools & Download the Source
 
 1. Download and install the current Version of **Composer** from [Getcomposer.org](https://getcomposer.org/)
 2. Install global instance of **Gulp** with `npm install -g gulp`
 3. Download the Source in your preferred folder with `git clone https://github.com/bedakb/vuewp.git`
-
 
 ## Required Plugins
 
