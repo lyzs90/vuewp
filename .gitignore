@@ -1,0 +1,31 @@
+# Application
+#web/app/plugins/*
+#!web/app/plugins/.gitkeep
+public/app/mu-plugins/*/
+public/app/upgrade
+#web/app/uploads/*
+#!web/app/uploads/.gitkeep
+
+# WordPress
+public/wp
+#public/.htaccess
+
+# Dotenv
+#.env
+#.env.*
+#!.env.example
+
+# Vendor (e.g. Composer)
+vendor/*
+#!vendor/.gitkeep
+
+# Node Package Manager
+node_modules
+
+# Theme
+.DS_Store
+public/app/themes/vuewp/.sass-cache/*
+public/app/themes/vuewp/css/custom.css
+public/app/themes/vuewp/js/main.min.js
+public/app/themes/vuewp/js/vendor.min.js
+.sass-cache/*

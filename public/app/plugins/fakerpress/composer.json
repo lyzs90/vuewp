@@ -1,0 +1,6 @@
+{
+    "require": {
+        "fzaninotto/faker": "^1.6",
+        "nesbot/carbon": "^1.21"
+    }
+}

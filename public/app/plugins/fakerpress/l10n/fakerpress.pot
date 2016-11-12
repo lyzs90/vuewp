@@ -1,0 +1,804 @@
+# Copyright (C) 2016 Gustavo Bordoni
+# This file is distributed under the GPL-2.0+.
+msgid ""
+msgstr ""
+"Project-Id-Version: FakerPress 0.4.3\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/fakerpress\n"
+"POT-Creation-Date: 2016-03-27 03:51:30+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Generator: grunt-wp-i18n 0.5.3\n"
+
+#: fakerpress.php:52
+msgid ""
+"<b>FakerPress</b> requires PHP 5.3 or higher, and the plugin has now "
+"disabled itself."
+msgstr ""
+
+#: fakerpress.php:54
+msgid ""
+"To allow better control over dates, advanced security improvements and "
+"performance gain."
+msgstr ""
+
+#: fakerpress.php:56
+msgid ""
+"Contact your Hosting or your system administrator and ask for this Upgrade "
+"to version 5.3 of PHP."
+msgstr ""
+
+#: inc/class-fp-admin.php:87 inc/class-fp-admin.php:276
+msgid "Settings"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "FakerPress"
+msgstr ""
+
+#: inc/class-fp-admin.php:426
+msgid "Changelog"
+msgstr ""
+
+#: inc/class-fp-admin.php:430
+msgid "Not Found (404)"
+msgstr ""
+
+#: inc/class-fp-admin.php:445
+msgid "%s on FakerPress"
+msgstr ""
+
+#: inc/class-fp-admin.php:506
+msgid "Contact Support"
+msgstr ""
+
+#: inc/class-fp-admin.php:510
+msgid "Add your [stars] on [wp.org] to spread the love."
+msgstr ""
+
+#: inc/class-fp-admin.php:531
+msgid "Help us with Translations for the FakerPress project"
+msgstr ""
+
+#: inc/class-fp-admin.php:532
+msgid "Version"
+msgstr ""
+
+#: inc/class-fp-admin.php:532
+msgid "View what changed in this version"
+msgstr ""
+
+#: inc/class-fp-admin.php:579
+msgid "Updated 500px Customer Application settings"
+msgstr ""
+
+#: inc/class-fp-admin.php:591
+msgid "The verification to erase the data has failed, you have to let it go..."
+msgstr ""
+
+#: inc/class-fp-admin.php:607
+msgid "All data is gone for good."
+msgstr ""
+
+#: inc/class-fp-ajax.php:21 inc/class-fp-ajax.php:84 inc/class-fp-ajax.php:154
+#: inc/class-fp-ajax.php:194
+msgid "Your request has failed"
+msgstr ""
+
+#: inc/class-fp-ajax.php:32
+msgid "Security fail, refresh the page and try again!"
+msgstr ""
+
+#: inc/class-fp-ajax.php:110 inc/class-fp-ajax.php:176
+#: inc/class-fp-ajax.php:213
+msgid "Request successful"
+msgstr ""
+
+#: inc/class-fp-dates.php:19
+msgid "Today"
+msgstr ""
+
+#: inc/class-fp-dates.php:25
+msgid "Yesterday"
+msgstr ""
+
+#: inc/class-fp-dates.php:31
+msgid "Tomorrow"
+msgstr ""
+
+#: inc/class-fp-dates.php:37
+msgid "This week"
+msgstr ""
+
+#: inc/class-fp-dates.php:43
+msgid "This month"
+msgstr ""
+
+#: inc/class-fp-dates.php:49
+msgid "This year"
+msgstr ""
+
+#: inc/class-fp-dates.php:55
+msgid "Last 15 days"
+msgstr ""
+
+#: inc/class-fp-dates.php:61
+msgid "Next 15 Days"
+msgstr ""
+
+#: inc/class-fp-field.php:800
+msgid "e.g.: 3"
+msgstr ""
+
+#: inc/class-fp-field.php:824
+msgid "e.g.: 12"
+msgstr ""
+
+#: inc/class-fp-field.php:907 view/terms.php:40
+msgid "Taxonomies"
+msgstr ""
+
+#: inc/class-fp-field.php:928
+msgid "Select Which taxonomies"
+msgstr ""
+
+#: inc/class-fp-field.php:935 modules/term.php:20
+msgid "Terms"
+msgstr ""
+
+#: inc/class-fp-field.php:946
+msgid "Which terms can be used"
+msgstr ""
+
+#: inc/class-fp-field.php:953 inc/class-fp-field.php:961
+msgid "Rate"
+msgstr ""
+
+#: inc/class-fp-field.php:954
+msgid "Percentage rate of posts that will have terms generated for the amount below"
+msgstr ""
+
+#: inc/class-fp-field.php:971 inc/class-fp-field.php:1159
+#: view/attachments.php:11 view/comments.php:8 view/posts.php:11
+#: view/terms.php:8 view/users.php:8
+msgid "Quantity"
+msgstr ""
+
+#: inc/class-fp-field.php:972
+msgid "How many terms will be selected"
+msgstr ""
+
+#: inc/class-fp-field.php:1065
+msgid "Type"
+msgstr ""
+
+#: inc/class-fp-field.php:1066
+msgid "Select a type of the Meta Field"
+msgstr ""
+
+#: inc/class-fp-field.php:1073
+msgid "Name"
+msgstr ""
+
+#: inc/class-fp-field.php:1074
+msgid "Select the name for Meta Field"
+msgstr ""
+
+#: inc/class-fp-field.php:1081
+msgid "Configuration"
+msgstr ""
+
+#: inc/class-fp-field.php:1092
+msgid "Select a Field type"
+msgstr ""
+
+#: inc/class-fp-field.php:1099
+msgid "Newborn Meta needs a Name, E.g.: _new_image"
+msgstr ""
+
+#: inc/class-fp-field.php:1140
+msgid "E.g.: , "
+msgstr ""
+
+#: inc/class-fp-field.php:1141
+msgid "Separator"
+msgstr ""
+
+#: inc/class-fp-field.php:1151
+msgid "E.g.: 55"
+msgstr ""
+
+#: inc/class-fp-field.php:1152
+msgid "Weight"
+msgstr ""
+
+#: inc/class-fp-field.php:1168
+msgid "Number"
+msgstr ""
+
+#: inc/class-fp-field.php:1175
+msgid "Range of possible numbers"
+msgstr ""
+
+#: inc/class-fp-field.php:1188
+msgid "WP_Query"
+msgstr ""
+
+#: inc/class-fp-field.php:1196
+msgid "category=2&posts_per_page=10"
+msgstr ""
+
+#: inc/class-fp-field.php:1197
+msgid ""
+"Uses <a href=\"http://codex.wordpress.org/Class_Reference/WP_Query\" "
+"target=\"_blank\">WP_Query</a>"
+msgstr ""
+
+#: inc/class-fp-field.php:1208
+msgid "Elements"
+msgstr ""
+
+#: inc/class-fp-field.php:1218
+msgid "Type all possible elements (Tab or Return)"
+msgstr ""
+
+#: inc/class-fp-field.php:1232
+msgid "Letter"
+msgstr ""
+
+#: inc/class-fp-field.php:1242
+msgid "Words"
+msgstr ""
+
+#: inc/class-fp-field.php:1254
+msgid "Text"
+msgstr ""
+
+#: inc/class-fp-field.php:1262
+msgid "Sentences"
+msgstr ""
+
+#: inc/class-fp-field.php:1266
+msgid "Paragraphs"
+msgstr ""
+
+#: inc/class-fp-field.php:1275
+msgid ""
+"Separator <b space>&mdash;</b> New Line: \"\\n"
+"\""
+msgstr ""
+
+#: inc/class-fp-field.php:1288
+msgid "HTML"
+msgstr ""
+
+#: inc/class-fp-field.php:1299
+msgid "HTML Tags, without &lt; or &gt;"
+msgstr ""
+
+#: inc/class-fp-field.php:1311
+msgid "Lexify"
+msgstr ""
+
+#: inc/class-fp-field.php:1318
+msgid "E.g.: John ##??"
+msgstr ""
+
+#: inc/class-fp-field.php:1319
+msgid "John ##?? <b spacer>&raquo;</b> John 29ze"
+msgstr ""
+
+#: inc/class-fp-field.php:1330
+msgid "Asciify"
+msgstr ""
+
+#: inc/class-fp-field.php:1337
+msgid "E.g.: John ****"
+msgstr ""
+
+#: inc/class-fp-field.php:1338
+msgid "John **** <b spacer>&raquo;</b> John r9\"+"
+msgstr ""
+
+#: inc/class-fp-field.php:1349
+msgid "Regexify"
+msgstr ""
+
+#: inc/class-fp-field.php:1356
+msgid "E.g.: [A-Z0-9._%+-]+@[A-Z0-9.-]"
+msgstr ""
+
+#: inc/class-fp-field.php:1357
+msgid "[A-Z0-9._%+-]+@[A-Z0-9.-] <b spacer>&raquo;</b> sm0@y8k96a"
+msgstr ""
+
+#: inc/class-fp-field.php:1368
+msgid "Person"
+msgstr ""
+
+#: inc/class-fp-field.php:1378
+msgid "Title"
+msgstr ""
+
+#: inc/class-fp-field.php:1382
+msgid "First Name"
+msgstr ""
+
+#: inc/class-fp-field.php:1386
+msgid "Last Name"
+msgstr ""
+
+#: inc/class-fp-field.php:1390 inc/class-fp-field.php:1529
+msgid "Suffix"
+msgstr ""
+
+#: inc/class-fp-field.php:1398
+msgid "Name Template"
+msgstr ""
+
+#: inc/class-fp-field.php:1406
+msgid "Male"
+msgstr ""
+
+#: inc/class-fp-field.php:1410
+msgid "Female"
+msgstr ""
+
+#: inc/class-fp-field.php:1427
+msgid "Geo Information"
+msgstr ""
+
+#: inc/class-fp-field.php:1437
+msgid "Country"
+msgstr ""
+
+#: inc/class-fp-field.php:1441
+msgid "City Prefix"
+msgstr ""
+
+#: inc/class-fp-field.php:1445
+msgid "City Suffix"
+msgstr ""
+
+#: inc/class-fp-field.php:1449
+msgid "City"
+msgstr ""
+
+#: inc/class-fp-field.php:1453
+msgid "State"
+msgstr ""
+
+#: inc/class-fp-field.php:1457
+msgid "State Abbr"
+msgstr ""
+
+#: inc/class-fp-field.php:1461
+msgid "Address"
+msgstr ""
+
+#: inc/class-fp-field.php:1465
+msgid "Secondary Address"
+msgstr ""
+
+#: inc/class-fp-field.php:1469
+msgid "Building Number"
+msgstr ""
+
+#: inc/class-fp-field.php:1473
+msgid "Street Name"
+msgstr ""
+
+#: inc/class-fp-field.php:1477
+msgid "Street Address"
+msgstr ""
+
+#: inc/class-fp-field.php:1481
+msgid "Postal Code"
+msgstr ""
+
+#: inc/class-fp-field.php:1485
+msgid "Latitude"
+msgstr ""
+
+#: inc/class-fp-field.php:1489
+msgid "Longitude"
+msgstr ""
+
+#: inc/class-fp-field.php:1496
+msgid "Address Format"
+msgstr ""
+
+#: inc/class-fp-field.php:1507 inc/class-fp-field.php:1525
+msgid "Company"
+msgstr ""
+
+#: inc/class-fp-field.php:1517
+msgid "Catch Phrase"
+msgstr ""
+
+#: inc/class-fp-field.php:1521
+msgid "BS"
+msgstr ""
+
+#: inc/class-fp-field.php:1536
+msgid "Company Format"
+msgstr ""
+
+#: inc/class-fp-field.php:1547 view/attachments.php:23 view/comments.php:50
+#: view/posts.php:23
+msgid "Date"
+msgstr ""
+
+#: inc/class-fp-field.php:1561
+msgid ""
+"Date Format <b space>&mdash;</b> See <a "
+"href=\"http://php.net/manual/function.date.php\" target=\"_blank\">PHP "
+"Date</a>"
+msgstr ""
+
+#: inc/class-fp-field.php:1573
+msgid "TimeZone"
+msgstr ""
+
+#: inc/class-fp-field.php:1583
+msgid "Email"
+msgstr ""
+
+#: inc/class-fp-field.php:1593
+msgid "Domain"
+msgstr ""
+
+#: inc/class-fp-field.php:1603
+msgid "IP"
+msgstr ""
+
+#: inc/class-fp-field.php:1613
+msgid "Browser User Agent"
+msgstr ""
+
+#: inc/class-fp-field.php:1640 inc/class-fp-field.php:1649
+msgid "yyyy-mm-dd"
+msgstr ""
+
+#: inc/class-fp-field.php:1656
+msgid "Select an Interval"
+msgstr ""
+
+#: inc/class-fp-variable.php:90
+msgid "Invalid use, type must be one of INPUT_* family."
+msgstr ""
+
+#: modules/comment.php:20
+msgid "Comments"
+msgstr ""
+
+#: modules/comment.php:21
+msgid "Generate Comments"
+msgstr ""
+
+#: modules/comment.php:118
+msgid "Zero is not a good number of comments to fake..."
+msgstr ""
+
+#: modules/comment.php:174 modules/post.php:217 modules/term.php:158
+#: modules/user.php:182
+msgid "Faked %d new %s: [ %s ]"
+msgstr ""
+
+#: modules/comment.php:176
+msgid "comment"
+msgid_plural "comments"
+msgstr[0] ""
+msgstr[1] ""
+
+#: modules/post.php:20
+msgid "Posts"
+msgstr ""
+
+#: modules/post.php:21
+msgid "Generate Posts"
+msgstr ""
+
+#: modules/post.php:120
+msgid "Zero is not a good number of posts to fake..."
+msgstr ""
+
+#: modules/post.php:219
+msgid "post"
+msgid_plural "posts"
+msgstr[0] ""
+msgstr[1] ""
+
+#: modules/term.php:21
+msgid "Generate Terms"
+msgstr ""
+
+#: modules/term.php:100
+msgid "Zero is not a good number of terms to fake..."
+msgstr ""
+
+#: modules/term.php:160
+msgid "term"
+msgid_plural "terms"
+msgstr[0] ""
+msgstr[1] ""
+
+#: modules/user.php:19
+msgid "Users"
+msgstr ""
+
+#: modules/user.php:20
+msgid "Generate Users"
+msgstr ""
+
+#: modules/user.php:123
+msgid "Zero is not a good number of users to fake..."
+msgstr ""
+
+#: modules/user.php:184
+msgid "user"
+msgid_plural "users"
+msgstr[0] ""
+msgstr[1] ""
+
+#: view/attachments.php:12 view/posts.php:12
+msgid ""
+"How many posts should be generated, use both fields to get a randomized "
+"number of posts within the given range."
+msgstr ""
+
+#: view/attachments.php:24 view/comments.php:51 view/posts.php:24
+msgid "Choose the range for the posts dates."
+msgstr ""
+
+#: view/attachments.php:36 view/posts.php:67
+msgid "Parents"
+msgstr ""
+
+#: view/attachments.php:37 view/posts.php:68
+msgid "What posts can be choosen as Parent to the ones created"
+msgstr ""
+
+#: view/attachments.php:50 view/posts.php:81
+msgid "Allow Comments"
+msgstr ""
+
+#: view/attachments.php:54 view/posts.php:85
+msgid "Comments closed"
+msgstr ""
+
+#: view/attachments.php:59 view/posts.php:90
+msgid "Comments Status"
+msgstr ""
+
+#: view/attachments.php:60 view/posts.php:91
+msgid "Sampling group of options for the comment status of the posts"
+msgstr ""
+
+#: view/attachments.php:70 view/posts.php:101
+msgid "Use HTML on your randomized post content?"
+msgstr ""
+
+#: view/attachments.php:77 view/comments.php:26 view/posts.php:108
+#: view/users.php:26
+msgid "Use HTML"
+msgstr ""
+
+#: view/attachments.php:92 view/comments.php:41 view/posts.php:123
+#: view/users.php:41
+msgid "HTML tags"
+msgstr ""
+
+#: view/attachments.php:93 view/posts.php:124
+msgid "Select the group of tags that can be selected to print on the Post Content"
+msgstr ""
+
+#: view/attachments.php:171 view/posts.php:204
+msgid "Author"
+msgstr ""
+
+#: view/attachments.php:172 view/posts.php:205
+msgid "Choose some users to be authors of posts generated."
+msgstr ""
+
+#: view/attachments.php:183 view/comments.php:61 view/posts.php:226
+#: view/terms.php:52 view/users.php:75
+msgid "Meta Field Rules"
+msgstr ""
+
+#: view/attachments.php:184 view/posts.php:227
+msgid "Use the fields below to configure a set of rules for your generated Posts"
+msgstr ""
+
+#: view/attachments.php:200 view/comments.php:83 view/posts.php:246
+#: view/terms.php:71 view/users.php:93
+msgid "Generate"
+msgstr ""
+
+#: view/changelog.php:2
+msgid "What has Changed in FakerPress"
+msgstr ""
+
+#: view/changelog.php:4
+msgid "Sorry but this page still doesn't have the information available."
+msgstr ""
+
+#: view/comments.php:9
+msgid ""
+"How many comments should be generated, use both fields to get a randomized "
+"number of comments within the given range."
+msgstr ""
+
+#: view/comments.php:20
+msgid "Use HTML on your randomized comment content?"
+msgstr ""
+
+#: view/comments.php:42
+msgid ""
+"Select the group of tags that can be selected to print on the Comment "
+"Content."
+msgstr ""
+
+#: view/comments.php:62
+msgid "Use the fields below to configure a set of rules for your generated Comments"
+msgstr ""
+
+#: view/error.php:14
+msgid "Oops, 404 Error!"
+msgstr ""
+
+#: view/error.php:16
+msgid ""
+"Yeah... Something went very wrong somewhere along your last actions.\n"
+"\n"
+"Right now we feel ashamed about this problem, <a href='%s' "
+"target='_blank'>poke us on twitter!</a>"
+msgstr ""
+
+#: view/posts.php:54
+msgid "Post Type"
+msgstr ""
+
+#: view/posts.php:55
+msgid "Sampling group of Post Types"
+msgstr ""
+
+#: view/posts.php:132
+msgid "e.g.: 75"
+msgstr ""
+
+#: view/posts.php:138
+msgid "Featured Image Rate"
+msgstr ""
+
+#: view/posts.php:139
+msgid "Percentage of the posts created that will have an Featured Image"
+msgstr ""
+
+#: view/posts.php:174
+msgid "Image Providers"
+msgstr ""
+
+#: view/posts.php:175
+msgid "Which image services will the generator use?"
+msgstr ""
+
+#: view/posts.php:215
+msgid "Taxonomy Field Rules"
+msgstr ""
+
+#: view/posts.php:216
+msgid ""
+"Use the fields below to configure the rules for the Taxonomy and Terms "
+"selected"
+msgstr ""
+
+#: view/settings.php:10
+msgid "Erase faked data"
+msgstr ""
+
+#: view/settings.php:11
+msgid "To erase all data generated type \"<b>Let it Go!</b>\"."
+msgstr ""
+
+#: view/settings.php:13
+msgid "Delete!"
+msgstr ""
+
+#: view/settings.php:22
+msgid "API: <i>500px</i>"
+msgstr ""
+
+#: view/settings.php:23
+msgid "Setting up 500px API connection is fully optional."
+msgstr ""
+
+#: view/settings.php:31
+msgid "E.g.: fU3TlASxi2uL76TcP5PAd946fYGZTVsfle6v13No"
+msgstr ""
+
+#: view/settings.php:35
+msgid "Consumer Key"
+msgstr ""
+
+#: view/settings.php:36
+msgid ""
+"Application Consumer Key — <a "
+"href=\"https://500px.com/settings/applications\" target=\"_blank\">500px "
+"Applications</a>"
+msgstr ""
+
+#: view/settings.php:38
+msgid "Save"
+msgstr ""
+
+#: view/terms.php:9
+msgid ""
+"How many terms should be generated, use both fields to get a randomized "
+"number of terms within the given range."
+msgstr ""
+
+#: view/terms.php:17
+msgid "Name Size"
+msgstr ""
+
+#: view/terms.php:18
+msgid "What is the size of the Term name"
+msgstr ""
+
+#: view/terms.php:41
+msgid "Group of taxonomies that the terms will be created within"
+msgstr ""
+
+#: view/terms.php:53
+msgid "Use the fields below to configure a set of rules for your generated Terms"
+msgstr ""
+
+#: view/users.php:9
+msgid ""
+"How many users should be generated, use both fields to get a randomized "
+"number of users within the given range."
+msgstr ""
+
+#: view/users.php:19
+msgid "Use HTML on your randomized user description?"
+msgstr ""
+
+#: view/users.php:42
+msgid ""
+"Select the group of tags that can be selected to print on the User "
+"Description."
+msgstr ""
+
+#: view/users.php:64
+msgid "Roles"
+msgstr ""
+
+#: view/users.php:65
+msgid "Sampling roles to be used"
+msgstr ""
+
+#: view/users.php:76
+msgid "Use the fields below to configure a set of rules for your generated users"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://fakerpress.com"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"FakerPress is a clean way to generate fake data to your WordPress "
+"instalation, great for developers who need testing"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Gustavo Bordoni"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://bordoni.me"
+msgstr ""
