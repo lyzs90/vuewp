@@ -18,7 +18,7 @@ Basic Single Page Theme developed with WordPress REST API v2 and VueJS 2.0.
 
 - Create new Database that would be reserved for WordPress
 - Open `.env` file and enter your database connection info data
-Open the Folder with the source code in your `cmd` and run following commands:
+- Open the Folder with the source code in your `cmd` and run following commands:
 - `composer install` to install wordpress core-files and PHP devDependencies
 - `npm install` to install the Node development tools (Scss, BrowserSync, dev-server etc.)
 - Activate/install required Plugins
