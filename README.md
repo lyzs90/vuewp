@@ -32,9 +32,11 @@ You can also access this URL in any other browser for testing: http://localhost:
 
 ## Credits
 
-*Enviroment by [Gilles Stuessi](https://github.com/gillesstuessi)
-*[VueJS](https://vuejs.org/) 
-*[WordPress](https://wordpress.org)
-*[WordPress REST API v2](https://wordpress.org/plugins/rest-api/)
-*[Better REST API Featured Images](https://wordpress.org/plugins/better-rest-api-featured-images/)
-*[Bedrock Boilerplate](https://roots.io/bedrock/)
+* Enviroment by [Gilles Stuessi](https://github.com/gillesstuessi)
+* [VueJS](https://vuejs.org/) 
+* [WordPress](https://wordpress.org)
+* [WordPress REST API v2](https://wordpress.org/plugins/rest-api/)
+* [Better REST API Featured Images](https://wordpress.org/plugins/better-rest-api-featured-images/)
+* [Bedrock Boilerplate](https://roots.io/bedrock/)
+
+Theme developed by Belmin Bedak - [bedakb](https://github.com/bedakb)
