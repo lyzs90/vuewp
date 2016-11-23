@@ -4,7 +4,7 @@
 			<div class="Container is--flex-navigation">
 				<h2>
 					<router-link to="/">
-						Site Title
+						{{ infoData.name }}
 					</router-link>
 				</h2>
 				<nav class="Navigation">
@@ -43,18 +43,21 @@
 <script>
 
 	import PagesService			from 			'../services/PagesService' 
+	import GlobalService		from 			'../services/GlobalService'
 
 	export default {
 
 		data() {
 			return {
 				items: [],
+				infoData: [],
 				mobileNavigation: false
 			}
 		},
 
 		created() {
 			this.fetchItems()
+			this.fetchInfoData()
 		},
 
 		methods: {
@@ -62,6 +65,12 @@
 				return PagesService.get()
 					.then(result => {
 						this.items = result.data
+					})
+			},
+			fetchInfoData() {
+				return GlobalService.get()
+					.then(result => {
+						this.infoData = result.data
 					})
 			},
 			toggleNavigation() {
