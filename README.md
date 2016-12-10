@@ -2,6 +2,8 @@
 
 Basic Single Page Theme developed with WordPress REST API v2 and VueJS 2.0.
 
+![Screenshot](https://s17.postimg.org/wzdzeckzj/Screen_Shot_2016_11_13_at_13_05_36.png)
+
 ## Source Code
 
 VueJS Source code is placed under `public/app/themes/vuewp/app/`
