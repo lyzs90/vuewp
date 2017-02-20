@@ -2,7 +2,7 @@
 
 Basic Single Page Theme developed with WordPress REST API v2 and VueJS 2.0.
 
-![Screenshot](https://s17.postimg.org/wzdzeckzj/Screen_Shot_2016_11_13_at_13_05_36.png)
+[![VueWP DEMO](https://s23.postimg.org/xie7cj9rv/vimeo_thumb.png)](https://vimeo.com/204961514 "See small VueWP Demo")
 
 ## Source Code
 
