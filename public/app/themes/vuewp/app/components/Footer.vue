@@ -8,7 +8,7 @@
 					</div>
 				</div>
 			</div>
-		</header>
+		</footer>
 	</div>
 </template>
 
