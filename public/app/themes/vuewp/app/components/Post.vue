@@ -1,7 +1,7 @@
 <template>
 	<div class="ColumnThird">
 		<article class="BlogPost">
-			<figure class="BlogPost__image">
+			<figure class="BlogPost__image" v-if="item.better_featured_image">
 				<img :src="item.better_featured_image.source_url" alt="Image">
 			</figure>
 			<header class="BlogPost__header">
