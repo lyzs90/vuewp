@@ -1,41 +1,36 @@
-var webpack = require('webpack'),
-	path 	= require('path');
+import webpack from "webpack";
+import path from "path";
 
 module.exports = {
+  resolve: {
+    modules: ["./node_modules", "./wp-content/themes/vuewp/js"]
+  },
 
-	resolve: {
-		moduleDirectories: ['./node_modules', './public/app/themes/vuewp/js']
-	},
+  entry: {
+    main: "./wp-content/themes/vuewp/app/app.js",
+    vendor: ["vue", "vue-router"]
+  },
 
-	entry: {
-		main: './public/app/themes/vuewp/app/app.js',
-		vendor: ['vue', 'vue-router']
-	},
+  output: {
+    path: path.join(__dirname, "wp-content/themes/vuewp/js"),
+    filename: "[name].min.js"
+  },
 
-	output: {
-		path: path.join(__dirname, 'public/app/themes/vuewp/js'),
-		filename: '[name].min.js'
-	},
-
-	module: {
-
-		loaders: [
-	    	{
-		        test:     /\.js$/,
-		        loader:   'babel-loader',
-		        exclude: /node_modules/
-	      	},
-      		{
-        		test: /\.vue$/,
-        		loader: 'vue'
-      		},
-      		{
-        		test: /\.(png|jpg|gif)$/,
-        		loader: 'url',
-      		}			
-		]
-
-	}
-
-} 
-
+  module: {
+    loaders: [
+      {
+        test: /\.js$/,
+        loader: "babel-loader",
+        exclude: /node_modules/
+      },
+      {
+        test: /\.vue$/,
+        loader: "vue-loader"
+      },
+      {
+        test: /\.(png|jpg|gif)$/,
+        loader: "url"
+      }
+    ]
+  }
+};

@@ -1,47 +1,27 @@
-# Single Page Theme developed with VueJS and WP REST API v2
+# VueJS Wordpress Theme
 
-Basic Single Page Theme developed with WordPress REST API v2 and VueJS 2.0.
+Powered by the WordPress REST API v2. Adapted from [dedakb/vuewp](https://github.com/bedakb/vuewp.git).
 
-[![VueWP DEMO](https://s23.postimg.org/xie7cj9rv/vimeo_thumb.png)](https://vimeo.com/204961514 "See small VueWP Demo")
+## Development
 
-## Source Code
+- Clone this repo `git clone https://github.com/lyzs90/vuewp.git`
+- Install the dependencies `npm install`
+- Set up a [Docker](https://www.docker.com/community-edition) environment
+- Start Wordpress and MySQL `docker-compose up -d`
+- Obtain your docker container ip `docker-machine ip`
+- Access the Wordpress server at this url [http://<container-ip>:8000](http://<container-ip>:8000) and perform the famous 5-minute install
+- Once Wordpress is set up, enable the theme
+- For a better development experience, you should run `gulp serve` to run the Browsersync proxy server and you can access your site at http://localhost:8080, complete with live reloading and other cool stuff.
 
-VueJS Source code is placed under `public/app/themes/vuewp/app/`
+## Deployment
 
-## Install Tools & Download the Source
+- To use as a theme, simply copy the `vuewp` directory to your Wordpress themes i.e. `/var/www/html/wp-content/themes`
+- For a headless setup, one option is to host the `vuewp` directory with built assets on [S3](http://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html) as a static site.
 
-1. Download and install the current Version of **Composer** from [Getcomposer.org](https://getcomposer.org/)
-2. Install global instance of **Gulp** with `npm install -g gulp`
-3. Download the Source in your preferred folder with `git clone https://github.com/bedakb/vuewp.git`
+## Recommended Plugins
 
-## Required Plugins
-
-1. [WordPress REST API v2](https://wordpress.org/plugins/rest-api/)
-2. [Better REST API Featured Images](https://wordpress.org/plugins/better-rest-api-featured-images/)
-
-## How to configure
-
-- Create new Database that would be reserved for WordPress
-- Open `.env` file and enter your database connection info data
-- Open the Folder with the source code in your `cmd` and run following commands:
-- `composer install` to install wordpress core-files and PHP devDependencies
-- `npm install` to install the Node development tools (Scss, BrowserSync, dev-server etc.)
-- Activate/install required Plugins
-- Make sure you are using pretty permalinks, otherwise WP REST API v2 will not work
-
-## Start Development-Server
-
-Start the development server by simply typing this command: `gulp serve`. A new Chrome window will open a local development server for you to work on.
-
-You can also access this URL in any other browser for testing: http://localhost:8080 or http://XXX.XXX.XX.XX:8080 (insert your LAN IP) to access it from your phone or other device.
-
-## Credits
-
-* Enviroment by [Gilles Stuessi](https://github.com/gillesstuessi)
-* [VueJS](https://vuejs.org/) 
-* [WordPress](https://wordpress.org)
-* [WordPress REST API v2](https://wordpress.org/plugins/rest-api/)
-* [Better REST API Featured Images](https://wordpress.org/plugins/better-rest-api-featured-images/)
-* [Bedrock Boilerplate](https://roots.io/bedrock/)
-
-Theme developed by Belmin Bedak - [bedakb](https://github.com/bedakb)
+- [Better REST API Featured Images](https://wordpress.org/plugins/better-rest-api-featured-images/)
+- [ACF to Rest API](https://wordpress.org/plugins/acf-to-rest-api/)
+- [Advanced Custom Fields](https://wordpress.org/plugins/advanced-custom-fields/)
+- [Custom Post Type UI](https://wordpress.org/plugins/custom-post-type-ui/)
+- [Fakerpress](https://wordpress.org/plugins/fakerpress/)

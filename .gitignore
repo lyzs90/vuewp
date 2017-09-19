@@ -1,14 +1,6 @@
 # Application
-#web/app/plugins/*
-#!web/app/plugins/.gitkeep
-public/app/mu-plugins/*/
-public/app/upgrade
-#web/app/uploads/*
-#!web/app/uploads/.gitkeep
-
-# WordPress
-public/wp
-#public/.htaccess
+wp-content/mu-plugins/*/
+wp-content/upgrade
 
 # Dotenv
 #.env
@@ -24,8 +16,8 @@ node_modules
 
 # Theme
 .DS_Store
-public/app/themes/vuewp/.sass-cache/*
-public/app/themes/vuewp/css/custom.css
-public/app/themes/vuewp/js/main.min.js
-public/app/themes/vuewp/js/vendor.min.js
+wp-content/themes/vuewp/.sass-cache/*
+wp-content/themes/vuewp/css/custom.css
+wp-content/themes/vuewp/js/main.min.js
+wp-content/themes/vuewp/js/vendor.min.js
 .sass-cache/*
