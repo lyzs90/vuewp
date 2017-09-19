@@ -1,6 +1,8 @@
 # Application
 wp-content/mu-plugins/*/
+wp-content/plugins/*/
 wp-content/upgrade
+wp-content/uploads/*/
 
 # Dotenv
 #.env
