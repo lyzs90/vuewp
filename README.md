@@ -1,6 +1,8 @@
-# VueJS Wordpress Theme
+# Vuewp
 
-Powered by the WordPress REST API v2. Adapted from [dedakb/vuewp](https://github.com/bedakb/vuewp.git).
+A Wordpress theme powered by VueJS and the WordPress REST API v2. The frontend can also be decoupled from Wordpress, but a separate server would be needed to host it.
+
+Adapted from [dedakb/vuewp](https://github.com/bedakb/vuewp.git).
 
 ## Development
 
