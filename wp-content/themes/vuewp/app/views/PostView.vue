@@ -21,7 +21,7 @@
               <h3>Latest Posts</h3>
             </header>
             <ul>
-              <li v-for="post in limitedPosts">
+              <li v-for="post in limitedPosts" v-bind:key="post.id">
                 <router-link :to="{ name: 'post', params: { id: post.id } }">
                   {{ post.title.rendered }}
                 </router-link>
@@ -81,50 +81,51 @@ export default {
 }
 </script>
 
-<style lang="stylus">
-	.BlogPostSingle
-		&__header
-			h1
-				font-size: 4em
-				padding: 0.3em 0
-		&__content
-			color: #444
-			h1, h2, h3, h4, h5, h6
-				padding: 0.3em 0
+<style lang="stylus" scoped>
 
-	.SidebarItem
-		margin-bottom: 1em
-		&__header
-			background: #fff
-			padding: 1em
-			text-transform: uppercase
-		ul
-			list-style: none
-			margin: 0
-			padding: 0
-			li
-				padding: 1em
-				background: #fefefe
-				border-top: 1px solid #eee
+.BlogPostSingle
+  &__header
+    h1
+      font-size: 4em
+      padding: 0.3em 0
+  &__content
+    color: #444
+    h1, h2, h3, h4, h5, h6
+      padding: 0.3em 0
+
+.SidebarItem
+  margin-bottom: 1em
+  &__header
+    background: #fff
+    padding: 1em
+    text-transform: uppercase
+  ul
+    list-style: none
+    margin: 0
+    padding: 0
+    li
+      padding: 1em
+      background: #fefefe
+      border-top: 1px solid #eee
 
 
-	.fade-enter-active
-		transition: opacity 0.5s
+.fade-enter-active
+  transition: opacity 0.5s
 
-	.fade-leave-active
-		@extend .fade-enter-active
+.fade-leave-active
+  @extend .fade-enter-active
 
-	.fade-enter
-		opacity: 0
+.fade-enter
+  opacity: 0
 
-	.fade-leave
-		@extend .fade-enter
+.fade-leave
+  @extend .fade-enter
 
-	@media only screen and (max-width: 640px)
-		.BlogPostSingle
-			margin: 1em 0
-			&__header
-				h1
-					font-size: 2.5em
+@media only screen and (max-width: 640px)
+  .BlogPostSingle
+    margin: 1em 0
+    &__header
+      h1
+        font-size: 2.5em
 
 </style>

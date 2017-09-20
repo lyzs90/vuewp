@@ -24,125 +24,126 @@ export default {
 </script>
 
 <style lang="stylus">
-	*
-		box-sizing: border-box
-		margin: 0
-		padding: 0
 
-	body
-		background: #f6f5f2
-		font-family: 'Montserrat', Helvetica, sans-serif
-		font-weight: 300
-		font-size: 0.9em
-		height: 100%
+*
+  box-sizing: border-box
+  margin: 0
+  padding: 0
 
-	a
-		text-decoration: none
+body
+  background: #f6f5f2
+  font-family: 'Montserrat', Helvetica, sans-serif
+  font-weight: 300
+  font-size: 0.9em
+  height: 100%
 
-	p
-		color: #444
-		font-family: 'Open Sans', sans-serif, Arial
+a
+  text-decoration: none
 
-	ul
-		padding: 1em
+p
+  color: #444
+  font-family: 'Open Sans', sans-serif, Arial
 
-	ol
-		@extend ul
+ul
+  padding: 1em
 
-	h1, h2, h3, h4, h5, h6
-		color: #343434
-		transition: all 0.5s ease-in-out
+ol
+  @extend ul
 
-	img
-		display: block
-		width: 100%
+h1, h2, h3, h4, h5, h6
+  color: #343434
+  transition: all 0.5s ease-in-out
 
-	button
-		background: transparent
+img
+  display: block
+  width: 100%
 
-	.RootWrap
-		display: flex
-		flex-direction: column
+button
+  background: transparent
 
-	.Container
-		margin: 0 auto
-		max-width: 80vw
+.RootWrap
+  display: flex
+  flex-direction: column
 
-	.Row
-		display: flex
-		flex-flow: row wrap
-		margin: 0 -0.8em
-		margin-bottom: 0.8em
-		&:last-child
-			margin-bottom: 0
+.Container
+  margin: 0 auto
+  max-width: 80vw
 
-	.ColumnFull
-		padding: 1em
-		width: 100%
+.Row
+  display: flex
+  flex-flow: row wrap
+  margin: 0 -0.8em
+  margin-bottom: 0.8em
+  &:last-child
+    margin-bottom: 0
 
-	.is--center-vertical
-		align-items: center
+.ColumnFull
+  padding: 1em
+  width: 100%
 
-	.Btn
-		border-radius: 2em
-		padding: 0.5em 1.5em
-		font-size: 0.9em
-		transition: all 0.5s ease-in-out
+.is--center-vertical
+  align-items: center
 
-	.Btn--primary
-		border: 1px solid #00aeef
-		color: #00aeef
-		&:hover
-			background: #00aeef
-			color: #fff
+.Btn
+  border-radius: 2em
+  padding: 0.5em 1.5em
+  font-size: 0.9em
+  transition: all 0.5s ease-in-out
 
-	.view
-		transition: opacity .5s ease-in-out
-		flex: 1
-		min-height: 100vh
+.Btn--primary
+  border: 1px solid #00aeef
+  color: #00aeef
+  &:hover
+    background: #00aeef
+    color: #fff
 
-	.fade-enter-active
-		transition: opacity 0.5s
+.view
+  transition: opacity .5s ease-in-out
+  flex: 1
+  min-height: 100vh
 
-	.fade-leave-active
-		@extend .fade-enter-active
+.fade-enter-active
+  transition: opacity 0.5s
 
-	.fade-enter
-		opacity: 0
+.fade-leave-active
+  @extend .fade-enter-active
 
-	.fade-leave
-		@extend .fade-enter
+.fade-enter
+  opacity: 0
 
-	.spinner
-		background: #fff
-		height: 2px
-		box-shadow: 0px 1px 3px #ccc
+.fade-leave
+  @extend .fade-enter
 
-	@media only screen and (max-width: 640px)
+.spinner
+  background: #fff
+  height: 2px
+  box-shadow: 0px 1px 3px #ccc
 
-		.ColumnHalf
-			width: 100%
+@media only screen and (max-width: 640px)
 
-	@media all and (min-width: 600px)
+  .ColumnHalf
+    width: 100%
 
-		.global-column-padding
-			padding: 1em
+@media all and (min-width: 600px)
 
-		.ColumnSeventy
-			width: 75%
-			@extend .global-column-padding
+  .global-column-padding
+    padding: 1em
 
-		.ColumnHalf
-			width: 50%
-			@extend .global-column-padding
+  .ColumnSeventy
+    width: 75%
+    @extend .global-column-padding
 
-		.ColumnThird
-			width: 33.33%
-			@extend .global-column-padding
+  .ColumnHalf
+    width: 50%
+    @extend .global-column-padding
 
-		.ColumnQuarter
-			width: 25%
-			@extend .global-column-padding
+  .ColumnThird
+    width: 33.33%
+    @extend .global-column-padding
+
+  .ColumnQuarter
+    width: 25%
+    @extend .global-column-padding
 
 
 </style>

@@ -1,14 +1,14 @@
 {
-  "name": "VueWP",
-  "version": "1.0.0",
-  "description": "Single Page WP Theme with VueJS",
+  "name": "Vuewp",
+  "version": "0.0.1",
+  "description": "VueJS 2.0 SPA for Wordpress",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Belmin Bedak",
-  "repository": "https://github.com",
-  "license": "UNLICENSED",
+  "author": "Shem Leong",
+  "repository": "https://github.com/lyzs90/vuewp",
+  "license": "GPLv3",
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",

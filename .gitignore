@@ -5,13 +5,8 @@ wp-content/upgrade
 wp-content/uploads/*/
 
 # Dotenv
-#.env
-#.env.*
-#!.env.example
-
-# Vendor (e.g. Composer)
-vendor/*
-#!vendor/.gitkeep
+.env
+!.env.example
 
 # Node Package Manager
 node_modules

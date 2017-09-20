@@ -76,24 +76,24 @@ export default {
 
 </script>
 
-<style lang="stylus">
+<style lang="stylus" scoped>
 
-	.Jumbotron
-		padding: 1em 0
-		margin-bottom: 1.5em
-		background: #fff
-		border-bottom: 1px solid #ccc
-		input
-			width: 100%
-			padding: 1em
-			height: 4em
-			border: 1px solid #ddd
-			border-radius: 5px
+.Jumbotron
+  padding: 1em 0
+  margin-bottom: 1.5em
+  background: #fff
+  border-bottom: 1px solid #ccc
+  input
+    width: 100%
+    padding: 1em
+    height: 4em
+    border: 1px solid #ddd
+    border-radius: 5px
 
-	@media only screen and (max-width: 640px)
+@media only screen and (max-width: 640px)
 
-		.Jumbotron
-			input
-				margin-top: 1em
+  .Jumbotron
+    input
+      margin-top: 1em
 
 </style>

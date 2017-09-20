@@ -23,14 +23,14 @@ export default {
 
 </script>
 
-<style lang="stylus">
-	.Footer
-		background: #fff
-		width: 100vw
-		padding: 1em
-		text-align: center
-		a
-			color: #333
+<style lang="stylus" scoped>
 
+.Footer
+  background: #fff
+  width: 100vw
+  padding: 1em
+  text-align: center
+  a
+    color: #333
 
 </style>

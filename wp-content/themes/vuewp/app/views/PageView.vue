@@ -21,7 +21,7 @@
               <h3>Latest Posts</h3>
             </header>
             <ul>
-              <li v-for="post in limitedPosts">
+              <li v-for="post in limitedPosts" v-bind:key="post.id">
                 <router-link :to="{ name: 'post', params: { id: post.id } }">
                   {{ post.title.rendered }}
                 </router-link>
@@ -81,21 +81,22 @@ export default {
 }
 </script>
 
-<style lang="stylus">
-	.fade-enter-active
-		transition: opacity 0.5s
+<style lang="stylus" scoped>
 
-	.fade-leave-active
-		@extend .fade-enter-active
+.fade-enter-active
+  transition: opacity 0.5s
 
-	.fade-enter
-		opacity: 0
+.fade-leave-active
+  @extend .fade-enter-active
 
-	.fade-leave
-		@extend .fade-enter
+.fade-enter
+  opacity: 0
 
-	@media only screen and (max-width: 640px)
-		.PageSingle
-			margin: 1em 0
+.fade-leave
+  @extend .fade-enter
+
+@media only screen and (max-width: 640px)
+  .PageSingle
+    margin: 1em 0
 
 </style>

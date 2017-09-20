@@ -9,7 +9,7 @@
         </h2>
         <nav class="Navigation">
           <ul>
-            <li v-for="page in items">
+            <li v-for="page in items" v-bind:key="page.id">
               <router-link :to="{ name: 'page', params: { id: page.id } }">
                 {{ page.title.rendered }}
               </router-link>
@@ -29,7 +29,7 @@
     <div class="MobileNavigationWrap" v-if="mobileNavigation">
       <div class="Container">
         <ul>
-          <li v-for="page in items">
+          <li v-for="page in items" v-bind:key="page.id">
             <router-link :to="{ name: 'page', params: { id: page.id } }">
               {{ page.title.rendered }}
             </router-link>
@@ -82,58 +82,60 @@ export default {
 
 </script>
 
-<style lang="stylus">
-	.Header
-		background: #00aeef
-		width: 100vw
-		padding: 1em
-		a
-			color: #fff
+<style lang="stylus" scoped>
 
-	.is--flex-navigation
-		display: flex
-		justify-content: space-between
+.Header
+  background: #00aeef
+  width: 100vw
+  padding: 1em
+  a
+    color: #fff
 
-	.Navigation
-		ul
-			margin: 0
-			padding: 0
-			list-style: none
-			display: flex
-			justify-content: center
-			align-items: center
-			li
-				padding: 0.3em
-				a
-					padding: 0 0.5em
-					text-transform: uppercase
-					font-weight: 300
-		.MobileNavigation
-			display: none
+.is--flex-navigation
+  display: flex
+  justify-content: space-between
 
-	.MobileNavigationWrap
-		display: none
+.Navigation
+  ul
+    margin: 0
+    padding: 0
+    list-style: none
+    display: flex
+    justify-content: center
+    align-items: center
+    li
+      padding: 0.3em
+      a
+        padding: 0 0.5em
+        text-transform: uppercase
+        font-weight: 300
+  .MobileNavigation
+    display: none
+
+.MobileNavigationWrap
+  display: none
 
 
-	@media (max-width: 640px)
-		.Navigation
-			ul
-				display: none
+@media (max-width: 640px)
+  .Navigation
+    ul
+      display: none
 
-			.MobileNavigation
-				display: flex
+    .MobileNavigation
+      display: flex
 
-		.MobileNavigationWrap
-			display: block
-			background: #00aeef
-			border-top: 1px solid #eee
-			transition: all 0.5s ease-in-out
-			ul
-				list-style: none
-				padding: 0.5em 0
-				li
-					padding: 0.5em 0
-					a
-						color: #fff
-						text-transform: uppercase
+  .MobileNavigationWrap
+    display: block
+    background: #00aeef
+    border-top: 1px solid #eee
+    transition: all 0.5s ease-in-out
+    ul
+      list-style: none
+      padding: 0.5em 0
+      li
+        padding: 0.5em 0
+        a
+          color: #fff
+          text-transform: uppercase
+
 </style>

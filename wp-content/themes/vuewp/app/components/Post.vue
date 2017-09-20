@@ -19,7 +19,7 @@
         <div class="Meta">
           <span>
             28 Oct 2016 &mdash;
-            <span v-for="category in item.post_categories">
+            <span v-for="category in item.post_categories" v-bind:key="category.id">
               <span>{{ category.name }}</span>
             </span>
           </span>
@@ -52,36 +52,36 @@ export default {
 
 </script>
 
-<style lang="stylus">
+<style lang="stylus" scoped>
 
-	.BlogPost
-		background: #fff
-		margin: 0.2em
-		font-family: 'Open Sans', sans-serif, Arial
+.BlogPost
+  background: #fff
+  margin: 0.2em
+  font-family: 'Open Sans', sans-serif, Arial
 
-		&__image
-			img
-				width: 100%
+  &__image
+    img
+      width: 100%
 
-		&__header
-			padding: 1em
-			background: #f9f9f9
-			transition: all 0.5s ease-in-out
-			&:hover
-				background: #00aeef
-				h2
-					color: #fff
+  &__header
+    padding: 1em
+    background: #f9f9f9
+    transition: all 0.5s ease-in-out
+    &:hover
+      background: #00aeef
+      h2
+        color: #fff
 
-		&__content
-			padding: 1em
+  &__content
+    padding: 1em
 
-		&__footer
-			padding: 1em
-			display: flex
-			justify-content: space-between
-			align-items: center
-			.Meta
-				color: #ccc
-				font-size: 0.8em
+  &__footer
+    padding: 1em
+    display: flex
+    justify-content: space-between
+    align-items: center
+    .Meta
+      color: #ccc
+      font-size: 0.8em
 
 </style>
