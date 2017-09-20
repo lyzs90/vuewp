@@ -1,6 +1,6 @@
 <template>
-  <div class="ColumnThird">
-    <article class="BlogPost">
+  <div class="mw-100 w-third-ns pa1">
+    <article class="br2 shadow-3 BlogPost">
       <figure class="BlogPost__image" v-if="item.better_featured_image">
         <img :src="item.better_featured_image.source_url" alt="Image">
       </figure>
@@ -54,9 +54,11 @@ export default {
 
 <style lang="stylus" scoped>
 
+.pa1
+  padding: 0.15rem
+
 .BlogPost
-  background: #fff
-  margin: 0.2em
+  background: #00FBBE
   font-family: 'Open Sans', sans-serif, Arial
 
   &__image
@@ -65,10 +67,9 @@ export default {
 
   &__header
     padding: 1em
-    background: #f9f9f9
     transition: all 0.5s ease-in-out
     &:hover
-      background: #00aeef
+      background: #4929D4
       h2
         color: #fff
 

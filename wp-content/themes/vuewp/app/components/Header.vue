@@ -1,6 +1,6 @@
 <template>
   <div>
-    <header class="Header">
+    <header class="w-100 pa3 Header">
       <div class="Container is--flex-navigation">
         <h2>
           <router-link to="/">
@@ -85,11 +85,9 @@ export default {
 <style lang="stylus" scoped>
 
 .Header
-  background: #00aeef
-  width: 100vw
-  padding: 1em
+  background: #fff
   a
-    color: #fff
+    color: #4929D4
 
 .is--flex-navigation
   display: flex
@@ -108,7 +106,7 @@ export default {
       a
         padding: 0 0.5em
         text-transform: uppercase
-        font-weight: 300
+        font-weight: 600
   .MobileNavigation
     display: none
 
@@ -126,7 +124,7 @@ export default {
 
   .MobileNavigationWrap
     display: block
-    background: #00aeef
+    background: #4929D4
     border-top: 1px solid #eee
     transition: all 0.5s ease-in-out
     ul

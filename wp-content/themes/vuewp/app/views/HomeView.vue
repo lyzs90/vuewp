@@ -1,24 +1,17 @@
 <template>
-  <div>
-    <div class="Jumbotron">
+  <div class="flex flex-column">
+    <span class="f1 ma7 center self-center fa fa-play-circle-o"></span>
+    <div class="pa3 mb3 Jumbotron">
       <div class="Container">
-        <div class="Row is--center-vertical">
-          <div class="ColumnHalf">
-            <h3>
-              <span class="fa fa-search"></span> Looking for something...</h3>
-          </div>
-          <div class="ColumnHalf">
-            <input v-model="filter" placeholder="Search...">
-          </div>
+        <div class="flex flex-row items-center justify-between">
+          <span @click="showSearchBar" class="f4 pa2 w-10 w-5-ns fa fa-search"></span>
+          <transition name="fade">
+            <input class="h2 pa1 ba br3 w-80 w-90-ns" v-if="searchBarVisible" v-model="filter" placeholder="Search...">
+          </transition>
         </div>
       </div>
     </div>
     <div class="Container">
-      <div class="Row">
-        <div class="ColumnFull">
-          <h2>Latest Posts</h2>
-        </div>
-      </div>
 
       <div class="Row">
 
@@ -46,12 +39,13 @@ export default {
   data() {
     return {
       items: [],
+      searchBarVisible: false,
       filter: ''
     }
   },
 
   created() {
-    this.fecthItems()
+    this.fetchItems()
   },
 
   computed: {
@@ -63,11 +57,14 @@ export default {
   },
 
   methods: {
-    fecthItems() {
+    fetchItems() {
       return PostsService.get()
         .then(result => {
           this.items = result.data
         })
+    },
+    showSearchBar(e) {
+      this.searchBarVisible = !this.searchBarVisible
     }
   }
 
@@ -78,22 +75,19 @@ export default {
 
 <style lang="stylus" scoped>
 
+.ma7
+  margin: 12rem
+
+.fa.fa-play-circle-o
+  cursor: pointer
+
 .Jumbotron
-  padding: 1em 0
-  margin-bottom: 1.5em
   background: #fff
-  border-bottom: 1px solid #ccc
   input
-    width: 100%
-    padding: 1em
-    height: 4em
-    border: 1px solid #ddd
-    border-radius: 5px
+    border-color: #ddd
 
-@media only screen and (max-width: 640px)
-
-  .Jumbotron
-    input
-      margin-top: 1em
+.fa.fa-search
+  color: #4929D4
+  cursor: pointer
 
 </style>

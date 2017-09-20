@@ -31,11 +31,12 @@ export default {
   padding: 0
 
 body
-  background: #f6f5f2
+  background: #fff
   font-family: 'Montserrat', Helvetica, sans-serif
   font-weight: 300
   font-size: 0.9em
   height: 100%
+  overflow-x: hidden
 
 a
   text-decoration: none
@@ -91,10 +92,10 @@ button
   transition: all 0.5s ease-in-out
 
 .Btn--primary
-  border: 1px solid #00aeef
-  color: #00aeef
+  border: 1px solid #4929D4
+  color: #4929D4
   &:hover
-    background: #00aeef
+    background: #4929D4
     color: #fff
 
 .view
