@@ -7,6 +7,7 @@ This solution is trivial to deploy as a Wordpress theme. You can also decouple i
 ## Features
 - [ES6](https://github.com/lukehoban/es6features) °\(^▿^)/°
 - [Webpack](https://webpack.js.org/) for module bundling
+- [Stylus](http://stylus-lang.com/) for CSS preprocessing
 - Simple asset pipeline with [gulp.js](https://gulpjs.com/)
 - Component-based architecture with [Vue.js](https://vuejs.org/)
 - Dead simple routing with [Vue-router](https://router.vuejs.org/en/essentials/getting-started.html)

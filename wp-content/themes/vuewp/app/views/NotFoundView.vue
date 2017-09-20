@@ -19,12 +19,13 @@ export default {}
 <style lang="stylus" scoped>
 
 .Jumbotron
-  padding: 5em 0
+  padding: 1em 0
   margin-bottom: 1.5em
   background: #fff
   border-bottom: 1px solid #ccc
 
 h3
+  padding: 1em 0
   margin: 0 auto
 
 </style>

@@ -1,6 +1,15 @@
 <template>
-  <div v-if="item.content">
-    <div class="Container">
+  <div>
+    <!-- 404 -->
+    <div class="Jumbotron" v-if="error">
+      <div class="Container">
+        <div class="Row is--center-vertical">
+          <h3>Page not found...</h3>
+        </div>
+      </div>
+    </div>
+    <!-- Main -->
+    <div class="Container" v-if="item.content">
       <div class="Row">
         <div class="ColumnSeventy">
           <article class="BlogPostSingle">
@@ -44,7 +53,8 @@ export default {
   data() {
     return {
       item: [],
-      posts: []
+      posts: [],
+      error: false
     }
   },
 
@@ -69,6 +79,9 @@ export default {
         .then(result => {
           this.item = result.data
         })
+        .catch(err => {
+          this.error = true
+        })
     },
     fetchPosts() {
       return PostsService.get()
@@ -83,6 +96,22 @@ export default {
 
 <style lang="stylus" scoped>
 
+/**
+ * 404
+ */
+.Jumbotron
+  padding: 1em 0
+  margin-bottom: 1.5em
+  background: #fff
+  border-bottom: 1px solid #ccc
+
+h3
+  padding: 1em 0
+  margin: 0 auto
+
+/**
+ * Main
+ */
 .BlogPostSingle
   &__header
     h1
