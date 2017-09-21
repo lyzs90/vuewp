@@ -44,4 +44,5 @@ This solution is trivial to deploy as a Wordpress theme. You can also decouple i
 - [Fakerpress](https://wordpress.org/plugins/fakerpress/)
 
 ## Credits
-Adapted from [dedakb/vuewp](https://github.com/bedakb/vuewp.git).
+Adapted from [dedakb/vuewp](https://github.com/bedakb/vuewp.git)
+Design by [@Radium](https://dribbble.com/shots/3102550-Egloo)
