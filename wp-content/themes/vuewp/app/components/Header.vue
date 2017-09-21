@@ -36,7 +36,7 @@
 
     <!-- Mobile Nav Wrap -->
     <transition name="fade">
-      <div class="MobileNavigationWrap" v-if="mobileNavigation">
+      <div class="mt4 w-100 fixed MobileNavigationWrap" v-if="mobileNavigation">
         <div class="Container">
 
           <ul>
@@ -105,6 +105,9 @@ $primary = #4929D4
 
 .primary
   color: $primary
+
+.mt4
+  margin-top: 3.75rem
 
 .Navigation
   ul

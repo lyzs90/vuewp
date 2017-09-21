@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="background bg-top h1 vh-100-ns"></div>
-    <div class="pt5 Container">
+    <div class="pt5 pt0-ns Container">
       <div class="Row">
         <post v-if="items.length > 0" v-for="item in items" :item="item" v-bind:key="item.id">
         </post>
