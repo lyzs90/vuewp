@@ -13,7 +13,8 @@ module.exports = {
 
   output: {
     path: path.join(__dirname, "wp-content/themes/vuewp/js"),
-    filename: "[name].min.js"
+    filename: "[name].min.js",
+	publicPath: './js/'
   },
 
   module: {
@@ -29,7 +30,7 @@ module.exports = {
       },
       {
         test: /\.(png|jpg|gif)$/,
-        loader: "url"
+        loader: "url-loader"
       }
     ]
   }

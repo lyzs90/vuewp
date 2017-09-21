@@ -2,14 +2,14 @@
   <div>
     <!-- 404 -->
     <div class="Jumbotron" v-if="error">
-      <div class="Container">
-        <div class="Row is--center-vertical">
+      <div class="pt5 Container">
+        <div class="Row items-center">
           <h3>Page not found...</h3>
         </div>
       </div>
     </div>
     <!-- Main -->
-    <div class="Container" v-if="item.content">
+    <div class="pt5 Container" v-if="item.content">
       <div class="Row">
         <div class="ColumnSeventy">
           <article class="PageSingle">

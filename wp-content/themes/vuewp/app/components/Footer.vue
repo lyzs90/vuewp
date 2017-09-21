@@ -1,12 +1,12 @@
 <template>
   <div>
-    <footer class="Footer">
+    <footer class="mt3 bg-white w-100 pa1 tc">
       <div class="Container">
         <div class="Row">
           <div class="ColumnFull">
-            <small>Developed with
-              <span class="fa fa-heart"></span> by
-              <a href="https://github.com/bedakb" target="_blank">@bedakb</a> &mdash; Powered by WordPress and VueJS | 2016</small>
+            <small>vuewp by
+              <a href="https://github.com/lyzs90" target="_blank" class="black-90">@lyzs90</a>
+            </small>
           </div>
         </div>
       </div>
@@ -22,15 +22,3 @@ export default {
 }
 
 </script>
-
-<style lang="stylus" scoped>
-
-.Footer
-  background: #fff
-  width: 100vw
-  padding: 1em
-  text-align: center
-  a
-    color: #333
-
-</style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="RootWrap">
+  <div class="flex flex-column">
     <header-bar></header-bar>
     <section class="MainSection">
       <transition name="fade">
@@ -25,13 +25,15 @@ export default {
 
 <style lang="stylus">
 
+$primary = #4929D4
+
 *
   box-sizing: border-box
   margin: 0
   padding: 0
 
 body
-  background: #fff
+  background: #F9F9F9
   font-family: 'Montserrat', Helvetica, sans-serif
   font-weight: 300
   font-size: 0.9em
@@ -62,10 +64,6 @@ img
 button
   background: transparent
 
-.RootWrap
-  display: flex
-  flex-direction: column
-
 .Container
   margin: 0 auto
   max-width: 80vw
@@ -82,9 +80,6 @@ button
   padding: 1em
   width: 100%
 
-.is--center-vertical
-  align-items: center
-
 .Btn
   border-radius: 2em
   padding: 0.5em 1.5em
@@ -92,10 +87,10 @@ button
   transition: all 0.5s ease-in-out
 
 .Btn--primary
-  border: 1px solid #4929D4
-  color: #4929D4
+  border: 1px solid $primary
+  color: $primary
   &:hover
-    background: #4929D4
+    background: $primary
     color: #fff
 
 .view

@@ -1,8 +1,8 @@
 <template>
   <div>
     <div class="Jumbotron">
-      <div class="Container">
-        <div class="Row is--center-vertical">
+      <div class="pt5 Container">
+        <div class="Row items-center">
           <h3>Page not found...</h3>
         </div>
       </div>

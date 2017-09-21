@@ -6,15 +6,15 @@ This solution is trivial to deploy as a Wordpress theme. You can also decouple i
 
 ## Features
 - [ES6](https://github.com/lukehoban/es6features) °\(^▿^)/°
+- Component-based architecture with [Vue.js](https://vuejs.org/)
+- Dead simple routing with [Vue-router](https://router.vuejs.org/en/essentials/getting-started.html)
+- [Vuex](https://vuex.vuejs.org/en/intro.html/) for state management
 - [Webpack](https://webpack.js.org/) for module bundling
 - [Stylus](http://stylus-lang.com/) for CSS preprocessing
 - Simple asset pipeline with [gulp.js](https://gulpjs.com/)
-- Component-based architecture with [Vue.js](https://vuejs.org/)
-- Dead simple routing with [Vue-router](https://router.vuejs.org/en/essentials/getting-started.html)
 - [Docker](https://www.docker.com/what-docker) for a deterministic and easy to set up development environment
 
 ## Upcoming
-- [Vuex](https://vuex.vuejs.org/en/intro.html/) for state management
 - [Prerendering](https://github.com/chrisvfritz/prerender-spa-plugin)
 
 
