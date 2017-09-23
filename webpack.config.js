@@ -33,5 +33,10 @@ module.exports = {
         loader: "url-loader"
       }
     ]
-  }
+  },
+  
+  plugins: [
+	new webpack.optimize.UglifyJsPlugin(),
+	new webpack.optimize.OccurrenceOrderPlugin()
+  ]
 };
