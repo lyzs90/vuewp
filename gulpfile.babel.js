@@ -92,7 +92,7 @@
   });
 
   gulp.task("webpack", function() {
-    var config = require(otherPaths.webpackConfig);
+    const config = require(otherPaths.webpackConfig);
     config.watch = true;
 
     webpack(config).pipe(gulp.dest(otherPaths.jsDest));

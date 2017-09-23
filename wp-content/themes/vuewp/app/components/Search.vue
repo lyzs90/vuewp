@@ -9,7 +9,13 @@
 
 <script>
 
+import { debounce } from 'lodash'
+
+import { mapMutations } from 'vuex'
+import * as types from "../store/mutation-types";
+
 export default {
+
   data() {
     return {
       searchBarVisible: false,
@@ -17,7 +23,21 @@ export default {
     }
   },
 
+  watch: {
+    filter: function(newFilter) {
+      this.updatePosts(newFilter)
+    }
+  },
+
   methods: {
+    ...mapMutations({
+      filterPosts: types.FILTER_POSTS
+    }),
+
+    updatePosts: debounce(function() {
+      this.filterPosts(this.filter)
+    }, 500),
+
     showSearchBar(e) {
       this.searchBarVisible = !this.searchBarVisible
     }

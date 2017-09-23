@@ -3,7 +3,7 @@
     <div class="background bg-top h1 vh-100-ns"></div>
     <div class="pt5 pt0-ns Container">
       <div class="Row">
-        <post v-if="items.length > 0" v-for="item in items" :item="item" v-bind:key="item.id">
+        <post v-if="items.length > 0" v-for="item in filteredItems" :item="item" v-bind:key="item.id">
         </post>
         <div class="InfoMessage" v-if="items.length < 1 && !isLoading">
           <h3>Seems like this site doesn't have any post yet...</h3>
@@ -25,8 +25,7 @@ export default {
 
   data() {
     return {
-      isLoading: true,
-      filter: ''
+      isLoading: true
     }
   },
 
@@ -39,8 +38,9 @@ export default {
 
   computed: {
     ...mapGetters({
-      items: 'allPosts'
-    })
+      items: 'allPosts',
+      filteredItems: 'filteredPosts'
+    }),
   },
 
   methods: {
@@ -59,6 +59,6 @@ export default {
 @media only screen and (min-width: 640px)
 
   .background
-    background-image: url(../static/bg.png)
+    background-image: url()
 
 </style>

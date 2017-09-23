@@ -3,12 +3,14 @@ import * as types from "../mutation-types";
 
 // initial state
 const state = {
-  items: []
+  items: [],
+  filteredItems: []
 };
 
 // getters
 const getters = {
-  allPosts: state => state.items
+  allPosts: state => state.items,
+  filteredPosts: state => state.filteredItems
 };
 
 // actions
@@ -25,10 +27,17 @@ const actions = {
 const mutations = {
   [types.FETCH_POSTS](state, { posts }) {
     state.items = posts;
+    state.filteredItems = posts;
   },
 
-  [types.FILTER_POSTS](state, { query }) {
-    state.items.filter(item => item.title.rendered.indexOf(query) > -1);
+  [types.FILTER_POSTS](state, string) {
+    if (string === "") {
+      state.filteredItems = state.items;
+    }
+    const match = state.items.filter(
+      item => item.title.rendered.indexOf(string) > -1
+    );
+    state.filteredItems = match;
   }
 };
 
