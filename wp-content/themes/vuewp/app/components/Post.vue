@@ -1,8 +1,8 @@
 <template>
-  <div class="mw-100 w-third-ns pa1">
-    <article class="br2 shadow-3 BlogPost">
-      <figure class="BlogPost__image" v-if="item.better_featured_image">
-        <img :src="item.better_featured_image.source_url" alt="Image">
+  <div class="mw-100 pa1 vh-50-ns" :class="widthNs">
+    <article class="br2 shadow-3 h-100-ns BlogPost" :style="{ background: color }">
+      <figure class="ma0 BlogPost__image" v-if="item.better_featured_image">
+        <img :src="item.better_featured_image.source_url" alt="Image" class="mw5-ns">
       </figure>
       <header class="BlogPost__header">
         <router-link :to="{ name: 'post', params: { id: item.id } }">
@@ -31,9 +31,20 @@
 
 <script>
 
+import { sample, times, findIndex } from 'lodash'
+import { mapGetters } from 'vuex'
+
 export default {
 
   props: ['item'],
+
+  data() {
+    return {
+      colors: ['#00FBBE', '#F8F8F8', '#E0E0E0', '#DFC360', '#61F8E9', '#252424'],
+
+      widths: ['w-third-ns', 'w-two-thirds-ns', 'w-100-ns', 'w-two-thirds-ns', 'w-third-ns', 'w-100-ns']
+    }
+  },
 
   computed: {
     trimTitle() {
@@ -43,9 +54,24 @@ export default {
         return this.item.title.rendered.substring(0, 35) + '...'
       }
     },
+
     trimExcerpt() {
       return this.item.excerpt.rendered.substring(3, 110) + '...'
-    }
+    },
+
+    color() {
+      return sample(this.colors)
+    },
+
+    widthNs() {
+      const indexInFilteredItems = findIndex(this.filteredItems, { 'id': this.item.id })
+
+      return this.widths[indexInFilteredItems]
+    },
+
+    ...mapGetters({
+      filteredItems: 'filteredPosts'
+    }),
   }
 
 }
@@ -58,7 +84,6 @@ export default {
   padding: 0.15rem
 
 .BlogPost
-  background: #00FBBE
   font-family: 'Open Sans', sans-serif, Arial
 
   &__image

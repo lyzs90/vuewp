@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="background bg-top h1 vh-100-ns"></div>
+    <div class="background bg-top h1 vh-95-ns"></div>
     <div class="pt5 pt0-ns Container">
       <div class="Row">
         <post v-if="items.length > 0" v-for="item in filteredItems" :item="item" v-bind:key="item.id">
@@ -57,8 +57,10 @@ export default {
 <style lang="stylus" scoped>
 
 @media only screen and (min-width: 640px)
+  .vh-95-ns
+    height: 95vh
 
   .background
-    background-image: url()
+    background-image: url(../static/bg.png)
 
 </style>
