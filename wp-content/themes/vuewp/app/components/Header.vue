@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="flex flex-column">
     <header class="w-100 pa3 bg-white-90 fixed">
-      <div class="Container flex justify-between">
+      <div class="indent center mw-85 flex justify-between items-center">
         <!-- Title -->
         <h2>
           <router-link to="/" class="primary">
@@ -12,23 +12,14 @@
         <!-- Search & Nav -->
         <div class="flex justify-end">
           <search class="mr3"></search>
-          <nav class="Navigation">
-            <ul>
-              <li v-for="page in items" v-bind:key="page.id">
-                <router-link :to="{ name: 'page', params: { id: page.id } }" class="primary">
-                  {{ page.title.rendered }}
-                </router-link>
-              </li>
-            </ul>
-            <ul class="MobileNavigation">
-              <li>
-                <a @click="toggleNavigation">
-                  <span class="primary fa fa-bars" v-if="!mobileNavigation"></span>
-                  <span class="primary fa fa-close" v-if="mobileNavigation"></span>
-                </a>
-              </li>
-            </ul>
-          </nav>
+          <ul class="list">
+            <li>
+              <a @click="toggleNavigation">
+                <span class="primary fa fa-bars" v-if="!mobileNavigation"></span>
+                <span class="primary fa fa-close" v-if="mobileNavigation"></span>
+              </a>
+            </li>
+          </ul>
         </div>
 
       </div>
@@ -36,12 +27,12 @@
 
     <!-- Mobile Nav Wrap -->
     <transition name="fade">
-      <div class="mt4 w-100 fixed MobileNavigationWrap" v-if="mobileNavigation">
-        <div class="Container">
+      <div class="mt4 w-100 w-30-ns self-end-ns fixed db bg-primary ease-all" v-if="mobileNavigation">
+        <div class="indent center mw-85">
 
-          <ul>
-            <li v-for="page in items" v-bind:key="page.id">
-              <router-link :to="{ name: 'page', params: { id: page.id } }">
+          <ul class="list pa2">
+            <li v-for="page in items" v-bind:key="page.id" class="pa2">
+              <router-link :to="{ name: 'page', params: { id: page.id } }" @click.native="toggleNavigation" class="white ttu">
                 {{ page.title.rendered }}
               </router-link>
             </li>
@@ -101,55 +92,13 @@ export default {
 
 <style lang="stylus" scoped>
 
-$primary = #4929D4
-
-.primary
-  color: $primary
-
 .mt4
   margin-top: 3.75rem
 
-.Navigation
-  ul
-    margin: 0
-    padding: 0
-    list-style: none
-    display: flex
-    justify-content: center
-    align-items: center
-    li
-      padding: 0.3em
-      a
-        padding: 0 0.5em
-        text-transform: uppercase
-        font-weight: 600
-  .MobileNavigation
-    display: none
+.ease-all
+  transition: all 0.5s ease-in-out
 
-.MobileNavigationWrap
-  display: none
-
-
-@media (max-width: 640px)
-  .Navigation
-    ul
-      display: none
-
-    .MobileNavigation
-      display: flex
-
-  .MobileNavigationWrap
-    display: block
-    background: $primary
-    border-top: 1px solid #eee
-    transition: all 0.5s ease-in-out
-    ul
-      list-style: none
-      padding: 0.5em 0
-      li
-        padding: 0.5em 0
-        a
-          color: #fff
-          text-transform: uppercase
+.fa
+  cursor: pointer
 
 </style>

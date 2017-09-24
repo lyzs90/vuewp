@@ -1,22 +1,11 @@
 <template>
-  <div class="mw-100 pa1 vh-50-ns" :class="widthNs">
-    <article class="br2 shadow-3 h-100-ns BlogPost" :style="{ background: color }">
-      <figure class="ma0 BlogPost__image" v-if="item.better_featured_image">
-        <img :src="item.better_featured_image.source_url" alt="Image" class="mw5-ns">
-      </figure>
-      <header class="BlogPost__header">
-        <router-link :to="{ name: 'post', params: { id: item.id } }">
-          <h2>{{ trimTitle }}</h2>
-        </router-link>
+  <div class="mw-100 pa3 pa1-ns vh-50-ns" :class="widthNs">
+    <router-link :to="{ name: 'post', params: { id: item.id } }" class="flex flex-column justify-between-ns cover 0-90 br2 shadow-3 h-100-ns grow" :style="{ 'background-color': color, 'background-image': 'url(' + backgroundImage + ')' }">
+      <header class="flex-grow-2 flex items-center pa3 self-center-ns">
+        <h2 class="white tc pa1">{{ trimTitle }}</h2>
       </header>
-      <aside class="BlogPost__content">
-        <p>{{ trimExcerpt }}</p>
-      </aside>
-      <footer class="BlogPost__footer">
-        <router-link :to="{ name: 'post', params: { id: item.id } }">
-          <button class="Btn Btn--primary">Read More</button>
-        </router-link>
-        <div class="Meta">
+      <footer class="pa2 self-start-ns">
+        <div class="white-60 f7 fw5">
           <span>
             28 Oct 2016 &mdash;
             <span v-for="category in item.post_categories" v-bind:key="category.id">
@@ -25,14 +14,16 @@
           </span>
         </div>
       </footer>
-    </article>
+    </router-link>
   </div>
 </template>
 
 <script>
 
-import { sample, times, findIndex } from 'lodash'
+import { findIndex } from 'lodash'
 import { mapGetters } from 'vuex'
+
+import { mapStyles } from '../services/UtilsService'
 
 export default {
 
@@ -60,14 +51,25 @@ export default {
     },
 
     color() {
-      return sample(this.colors)
+      const colorsArray = mapStyles(this.filteredItems)(this.colors)
+      const indexInFilteredItems = findIndex(this.filteredItems, { 'id': this.item.id })
+
+      return colorsArray[indexInFilteredItems]
     },
 
     widthNs() {
-      const test = times(3, [1, 2, 3])
+      const widthsArray = mapStyles(this.filteredItems)(this.widths)
       const indexInFilteredItems = findIndex(this.filteredItems, { 'id': this.item.id })
 
-      return this.widths[indexInFilteredItems]
+      return widthsArray[indexInFilteredItems]
+    },
+
+    backgroundImage() {
+      if (this.item.better_featured_image) {
+        return this.item.better_featured_image.source_url
+      }
+      
+      return ''
     },
 
     ...mapGetters({
@@ -81,34 +83,12 @@ export default {
 
 <style lang="stylus" scoped>
 
-.pa1
-  padding: 0.15rem
+.flex-grow-2
+  flex-grow: 2
 
-.BlogPost
-  font-family: 'Open Sans', sans-serif, Arial
+@media all and (min-width: 600px)
 
-  &__image
-    img
-      width: 100%
-
-  &__header
-    padding: 1em
-    transition: all 0.5s ease-in-out
-    &:hover
-      background: #4929D4
-      h2
-        color: #fff
-
-  &__content
-    padding: 1em
-
-  &__footer
-    padding: 1em
-    display: flex
-    justify-content: space-between
-    align-items: center
-    .Meta
-      color: #ccc
-      font-size: 0.8em
+  .pa1-ns
+    padding: 0.15rem
 
 </style>

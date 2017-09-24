@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="Jumbotron">
-      <div class="pt5 Container">
+      <div class="pt5 indent center mw-85">
         <div class="Row items-center">
           <h3>Page not found...</h3>
         </div>

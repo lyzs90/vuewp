@@ -3,7 +3,7 @@
 
     <!-- 404 -->
     <div class="Jumbotron" v-if="error">
-      <div class="pt5 Container">
+      <div class="pt5 indent center mw-85">
         <div class="Row items-center">
           <h3>Page not found...</h3>
         </div>
@@ -11,7 +11,7 @@
     </div>
 
     <!-- Main -->
-    <div class="pt5 Container" v-if="item.content">
+    <div class="pt5 indent center mw-85" v-if="item.content">
       <div class="Row">
         <div class="ColumnSeventy">
           <article class="BlogPostSingle">

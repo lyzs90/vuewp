@@ -1,7 +1,9 @@
 <template>
   <div>
-    <div class="bg-top h1 vh-95-ns" :style="{ 'background-image': 'url(' + backgroundImage + ')' }"></div>
-    <div class="pt5 pt0-ns Container">
+    <div class="flex flex-column justify-center bg-top mt5-ns h1 h-75-ns indent center mw-85 br3" :style="{ 'background-image': 'url(' + backgroundImage + ')' }">
+       <span class="primary f1 ma7 center self-center fa fa-play-circle-o"></span>
+    </div>
+    <div class="pt5 indent center mw-85">
       <div class="Row">
         <post v-if="items.length > 0" v-for="item in filteredItems" :item="item" v-bind:key="item.id">
         </post>
@@ -60,6 +62,14 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+
+.fa.fa-play-circle-o
+  cursor: pointer
+  text-shadow: 3px 3px 16px #D3D3D3
+
+  &:hover
+    opacity: 0.7
+    transition: all 0.5 ease-in-out
 
 @media only screen and (min-width: 640px)
   .vh-95-ns

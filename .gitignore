@@ -17,4 +17,5 @@ wp-content/themes/vuewp/.sass-cache/*
 wp-content/themes/vuewp/css/custom.css
 wp-content/themes/vuewp/js/main.min.js
 wp-content/themes/vuewp/js/vendor.min.js
+wp-content/themes/vuewp/app/static/*/
 .sass-cache/*

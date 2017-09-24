@@ -1,7 +1,7 @@
 <template>
   <div>
     <footer class="mt3 bg-white w-100 pa1 tc">
-      <div class="Container">
+      <div class="indent center mw-85">
         <div class="Row">
           <div class="ColumnFull">
             <small>vuewp by

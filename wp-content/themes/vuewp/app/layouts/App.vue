@@ -25,7 +25,19 @@ export default {
 
 <style lang="stylus">
 
-$primary = #4929D4
+$primary = #5C5F61
+
+.primary
+  color: $primary
+
+.bg-primary
+  background-color: $primary
+
+.b--primary
+  border-color: $primary
+
+.mw-85
+  max-width: 85vw
 
 *
   box-sizing: border-box
@@ -33,7 +45,7 @@ $primary = #4929D4
   padding: 0
 
 body
-  background: #F9F9F9
+  background: #fff
   font-family: 'Montserrat', Helvetica, sans-serif
   font-weight: 300
   font-size: 0.9em
