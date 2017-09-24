@@ -4,6 +4,8 @@ An elegant, responsive SPA powered by VueJS and the Wordpress REST v2 API. Unlik
 
 This solution is trivial to deploy as a Wordpress theme. You can also decouple it from Wordpress and host it as static site on S3 or serve it with Nginx on Heroku.
 
+<img src="./wp-content/themes/vuewp/screenshot.png" width="800">
+
 ## Features
 - [ES6](https://github.com/lukehoban/es6features) °\(^▿^)/°
 - Component-based architecture with [Vue.js](https://vuejs.org/)
@@ -44,5 +46,5 @@ This solution is trivial to deploy as a Wordpress theme. You can also decouple i
 - [Fakerpress](https://wordpress.org/plugins/fakerpress/)
 
 ## Credits
-Adapted from [dedakb/vuewp](https://github.com/bedakb/vuewp.git)
-Design by [@Radium](https://dribbble.com/shots/3102550-Egloo)
+- Adapted from [dedakb/vuewp](https://github.com/bedakb/vuewp.git)
+- Design inspired by [@Radium](https://dribbble.com/shots/3102550-Egloo)
