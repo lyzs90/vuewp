@@ -14,7 +14,7 @@ module.exports = {
   output: {
     path: path.join(__dirname, "wp-content/themes/vuewp/js"),
     filename: "[name].min.js",
-	publicPath: './js/'
+    publicPath: "./js/"
   },
 
   module: {
@@ -30,13 +30,20 @@ module.exports = {
       },
       {
         test: /\.(png|jpg|gif)$/,
-        loader: "url-loader"
+        use: [
+          {
+            loader: "url-loader",
+            options: {
+              limit: 25000 // inline files below 25kb
+            }
+          }
+        ]
       }
     ]
   },
-  
+
   plugins: [
-	new webpack.optimize.UglifyJsPlugin(),
-	new webpack.optimize.OccurrenceOrderPlugin()
+    new webpack.optimize.UglifyJsPlugin(),
+    new webpack.optimize.OccurrenceOrderPlugin()
   ]
 };

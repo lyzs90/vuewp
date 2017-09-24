@@ -20,6 +20,7 @@ services:
      image: wordpress:latest
      volumes:
        - ./wp-content:/var/www/html/wp-content
+       - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
      ports:
        - "8000:80"
      restart: always

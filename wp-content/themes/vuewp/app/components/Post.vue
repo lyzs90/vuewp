@@ -64,6 +64,7 @@ export default {
     },
 
     widthNs() {
+      const test = times(3, [1, 2, 3])
       const indexInFilteredItems = findIndex(this.filteredItems, { 'id': this.item.id })
 
       return this.widths[indexInFilteredItems]
