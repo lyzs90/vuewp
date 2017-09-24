@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="flex flex-column justify-center bg-top mt5-ns h1 h-75-ns indent center mw-85 br3" :style="{ 'background-image': 'url(' + backgroundImage + ')' }">
-       <span class="primary f1 ma7 center self-center fa fa-play-circle-o"></span>
+      <span class="primary f1 ma7 center self-center fa fa-play-circle-o"></span>
     </div>
     <div class="pt5 indent center mw-85">
       <div class="Row">

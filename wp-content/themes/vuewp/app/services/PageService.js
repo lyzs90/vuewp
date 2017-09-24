@@ -1,7 +1,7 @@
-import Vue from "vue";
+import Vue from 'vue';
 
 export default {
   get(id) {
-    return Vue.http.get(`/wp-json/wp/v2/pages/${id}`);
-  }
+    return Vue.http.get(`${WP_HOME}/wp-json/wp/v2/pages/${id}`);
+  },
 };

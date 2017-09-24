@@ -1,5 +1,5 @@
 {
-  "name": "Vuewp",
+  "name": "vuewp",
   "version": "0.0.1",
   "description": "VueJS 2.0 SPA for Wordpress",
   "main": "index.js",
@@ -9,7 +9,7 @@
   "author": "Shem Leong",
   "repository": "https://github.com/lyzs90/vuewp",
   "license": "GPLv3",
-  "devDependencies": {
+  "dependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-plugin-transform-runtime": "^6.23.0",
@@ -21,6 +21,7 @@
     "dotenv": "^4.0.0",
     "eslint": "^4.7.1",
     "eslint-config-airbnb-base": "^12.0.0",
+    "eslint-plugin-import": "^2.7.0",
     "file-loader": "^0.11.2",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
@@ -32,8 +33,10 @@
     "gulp-sass": "^3.1.0",
     "gulp-sass-lint": "^1.3.3",
     "gulp-util": "^3.0.8",
+    "html-webpack-plugin": "^2.30.1",
     "lodash": "^4.17.4",
     "nprogress": "^0.2.0",
+    "prerender-spa-plugin": "^2.1.0",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.1",
     "url-loader": "^0.5.9",

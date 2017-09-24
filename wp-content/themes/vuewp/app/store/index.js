@@ -1,18 +1,18 @@
-import Vue from "vue";
-import Vuex from "vuex";
-//import * as actions from "./actions";
-//import * as getters from "./getters";
-import posts from "./modules/posts";
+import Vue from 'vue';
+import Vuex from 'vuex';
+// import * as actions from "./actions";
+// import * as getters from "./getters";
+import posts from './modules/posts';
 
 Vue.use(Vuex);
 
-const debug = process.env.NODE_ENV !== "production";
+const debug = process.env.NODE_ENV !== 'production';
 
 export default new Vuex.Store({
-  //actions,
-  //getters,
+  // actions,
+  // getters,
   modules: {
-    posts
+    posts,
   },
-  strict: debug
+  strict: debug,
 });

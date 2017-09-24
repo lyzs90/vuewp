@@ -135,7 +135,9 @@ foreach ($categories as $term) {
 function vuewp_scripts() {
 	wp_enqueue_style( 'vuewp-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'vuewp-app', get_template_directory_uri() . '/js/main.min.js', array(), '20151217', true );
+	wp_enqueue_script( 'vuewp-main', get_template_directory_uri() . '/dist/js/main.min.js', array(), '20151217', true );
+	
+	wp_enqueue_script( 'vuewp-vendor', get_template_directory_uri() . '/dist/js/vendor.min.js', array(), '20151217', true );
 
 }
 add_action( 'wp_enqueue_scripts', 'vuewp_scripts' );
