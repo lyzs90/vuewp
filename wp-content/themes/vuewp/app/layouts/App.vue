@@ -39,6 +39,9 @@ $primary = #5C5F61
 .mw-85
   max-width: 85vw
 
+.mw-87
+  max-width: 87vw
+
 *
   box-sizing: border-box
   margin: 0

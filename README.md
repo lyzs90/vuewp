@@ -15,7 +15,7 @@ This solution is trivial to deploy as a Wordpress theme. You can also decouple i
 - [Stylus](http://stylus-lang.com/) for CSS preprocessing
 - Simple asset pipeline with [gulp.js](https://gulpjs.com/)
 - [Docker](https://www.docker.com/what-docker) for a deterministic and easy to set up development environment
-- [Prerendering](https://github.com/chrisvfritz/prerender-spa-plugin)
+- [Prerendering](https://github.com/chrisvfritz/prerender-spa-plugin) of the index route with client-side hydration
 
 
 ## Development
@@ -33,6 +33,7 @@ This solution is trivial to deploy as a Wordpress theme. You can also decouple i
 ## Deployment
 
 - Run the production build `npm run prod`
+- View with `gulp brower-sync` and/or some http server eg. `python -m http.server 8080`
 - To use as a theme, simply copy the `vuewp` directory to your Wordpress themes i.e. `/var/www/html/wp-content/themes`
 - For a headless setup, one option is to host the `dist` directory on [S3](http://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html) as a static site.
 
