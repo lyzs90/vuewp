@@ -19,8 +19,11 @@
 
 import MediaService from '../services/MediaService'
 import PostsService from '../services/PostsService'
-import Post from '../components/Post.vue'
 import { mapGetters, mapActions } from 'vuex'
+
+const Post = () => import(
+  /* webpackChunkName: "below-fold" */ '../components/Post.vue'
+);
 
 export default {
 

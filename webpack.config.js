@@ -1,5 +1,4 @@
 import webpack from 'webpack';
-import PrerenderSpaPlugin from 'prerender-spa-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import path from 'path';
 
@@ -18,7 +17,8 @@ module.exports = {
   output: {
     path: path.resolve('wp-content/themes/vuewp/dist/js'),
     filename: '[name].min.js',
-    publicPath: './js', // relative to dist
+    chunkFilename: '[name].min.js',
+    publicPath: './js/', // relative to dist
   },
 
   module: {
@@ -65,6 +65,11 @@ module.exports = {
         __dirname,
         'wp-content/themes/vuewp/dist/index.html',
       ),
+    }),
+
+    // Extract common dependencies into an existing entry chunk or an entirely // new chunk
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'common',
     }),
   ],
 };

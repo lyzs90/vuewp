@@ -16,6 +16,7 @@ This solution is trivial to deploy as a Wordpress theme. You can also decouple i
 - Simple asset pipeline with [gulp.js](https://gulpjs.com/)
 - [Docker](https://www.docker.com/what-docker) for a deterministic and easy to set up development environment
 - [Prerendering](https://github.com/chrisvfritz/prerender-spa-plugin) of the index route with client-side hydration
+- [Code splitting](https://webpack.js.org/guides/code-splitting/) of below the fold content for faster page loads
 
 
 ## Development
