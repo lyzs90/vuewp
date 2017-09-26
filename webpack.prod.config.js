@@ -47,10 +47,11 @@ module.exports = {
   },
 
   plugins: [
+    new webpack.optimize.UglifyJsPlugin(),
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.DefinePlugin({
       'process.env': {
-        NODE_ENV: '"development"',
+        NODE_ENV: '"production"',
       },
 
       // Accessible as a global in VueJS
@@ -66,5 +67,18 @@ module.exports = {
         'wp-content/themes/vuewp/dist/index.html',
       ),
     }),
+
+    // For prerendering routes
+    new PrerenderSpaPlugin(
+      // Absolute path to compiled SPA
+      // @see https://github.com/chrisvfritz/prerender-spa-plugin/issues/108#issuecomment-332134979
+      path.resolve(__dirname, 'wp-content/themes/vuewp/dist'),
+      // List of routes to prerender
+      ['/'],
+      // Advanced options
+      {
+        captureAfterTime: 5000,
+      },
+    ),
   ],
 };

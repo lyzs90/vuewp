@@ -15,8 +15,6 @@ This solution is trivial to deploy as a Wordpress theme. You can also decouple i
 - [Stylus](http://stylus-lang.com/) for CSS preprocessing
 - Simple asset pipeline with [gulp.js](https://gulpjs.com/)
 - [Docker](https://www.docker.com/what-docker) for a deterministic and easy to set up development environment
-
-## Upcoming
 - [Prerendering](https://github.com/chrisvfritz/prerender-spa-plugin)
 
 
@@ -30,12 +28,13 @@ This solution is trivial to deploy as a Wordpress theme. You can also decouple i
 - Add your container ip to `.env.example` and rename to `.env`
 - Access the Wordpress server at this url [http://<container-ip>:8000](http://<container-ip>:8000) and perform the famous 5-minute install
 - Once Wordpress is set up, enable the theme
-- For a better development experience, you should run `gulp serve` to run the Browsersync proxy server and you can access your site at http://localhost:8080, complete with live reloading and other cool stuff.
+- For a better development experience, you should run `npm run dev` to run the Browsersync proxy server and you can access your site at http://localhost:8080, complete with live reloading and other cool stuff.
 
 ## Deployment
 
+- Run the production build `npm run prod`
 - To use as a theme, simply copy the `vuewp` directory to your Wordpress themes i.e. `/var/www/html/wp-content/themes`
-- For a headless setup, one option is to host the `vuewp` directory with built assets on [S3](http://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html) as a static site.
+- For a headless setup, one option is to host the `dist` directory on [S3](http://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html) as a static site.
 
 ## Recommended Plugins
 

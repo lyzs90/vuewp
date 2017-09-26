@@ -41,13 +41,14 @@
   | Global Config
   |-----------------------------------------------------------------------------
   */
-  const reload = browserSync.reload;
+
   const themePath = './wp-content/themes/vuewp';
 
   const otherPaths = {
     staticFiles: [`${themePath}/index.html`],
     distPath: `${themePath}/dist`,
     webpackConfig: './webpack.config.js',
+    webpackProdConfig: './webpack.prod.config.js',
   };
 
   /*
@@ -107,7 +108,7 @@
   |-----------------------------------------------------------------------------
   */
   gulp.task('webpack:build', () => {
-    webpack(require(otherPaths.webpackConfig)).pipe(
+    webpack(require(otherPaths.webpackProdConfig)).pipe(
       gulp.dest(`${otherPaths.distPath}/js`),
     );
   });
@@ -177,12 +178,15 @@
 
   /** Server Task */
   gulp.task('serve', ['dev', 'browser-sync'], () => {
+    // Watch HTML
+    gulp.watch(`${otherPaths.distPath}/index.html`, browserSync.reload);
+
     // Watch JS Scripts
-    gulp.watch(`${otherPaths.distPath}/**/*.js`, reload);
+    gulp.watch(`${otherPaths.distPath}/**/*.js`, browserSync.reload);
 
     // Watch Styles
-    gulp.watch(`${themePath}/sass/**/*.scss`, ['styles', reload]);
+    gulp.watch(`${themePath}/sass/**/*.scss`, ['styles', browserSync.reload]);
 
-    gulp.watch(['./gulpfile.js'], ['scripts', 'styles', reload]);
+    gulp.watch(['./gulpfile.js'], ['scripts', 'styles', browserSync.reload]);
   });
 })();

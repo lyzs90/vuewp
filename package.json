@@ -4,7 +4,9 @@
   "description": "VueJS 2.0 SPA for Wordpress",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prod": "gulp",
+    "dev": "gulp serve"
   },
   "author": "Shem Leong",
   "repository": "https://github.com/lyzs90/vuewp",
