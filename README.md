@@ -4,7 +4,7 @@ An elegant, responsive SPA powered by VueJS and the Wordpress REST v2 API. Unlik
 
 This solution is trivial to deploy as a Wordpress theme. You can also decouple it from Wordpress and host it as static site on S3 or serve it with Nginx on Heroku.
 
-<img src="./wp-content/themes/vuewp/screenshot.png" width="800">
+<img src="./wp-content/themes/vuewp/screenshot.png" width="500">
 
 ## Features
 - [ES6](https://github.com/lukehoban/es6features) °\(^▿^)/°
