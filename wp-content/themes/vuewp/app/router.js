@@ -14,8 +14,8 @@ export default new VueRouter({
   mode: 'history',
   routes: [
     { name: 'home', path: '/', component: HomeView },
-    { name: 'post', path: '/post/:id', component: PostView },
-    { name: 'page', path: '/page/:id', component: PageView },
+    { name: 'post', path: '/post/:slug', component: PostView },
+    { name: 'page', path: '/page/:slug', component: PageView },
     { path: '*', component: NotFoundView },
   ],
   scrollBehavior() {

@@ -32,8 +32,8 @@
               <h3>Latest Posts</h3>
             </header>
             <ul>
-              <li v-for="post in limitedPosts" v-bind:key="post.id">
-                <router-link :to="{ name: 'post', params: { id: post.id } }">
+              <li v-for="post in limitedPosts" v-bind:key="post.slug">
+                <router-link :to="{ name: 'post', params: { slug: post.slug } }">
                   {{ post.title.rendered }}
                 </router-link>
               </li>
@@ -49,7 +49,6 @@
 <script>
 
 import PostService from '../services/PostService'
-import PostsService from '../services/PostsService'
 
 export default {
 
@@ -78,16 +77,16 @@ export default {
 
   methods: {
     fetchItem() {
-      return PostService.get(this.$route.params.id)
+      return PostService.get(this.$route.params.slug)
         .then(result => {
-          this.item = result.data
+          this.item = result.data[0]
         })
         .catch(err => {
           this.error = true
         })
     },
     fetchPosts() {
-      return PostsService.get()
+      return PostService.getAll()
         .then(result => {
           this.posts = result.data
         })

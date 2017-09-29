@@ -1,6 +1,6 @@
 {
   "name": "vuewp",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "VueJS 2.0 SPA for Wordpress",
   "main": "index.js",
   "scripts": {

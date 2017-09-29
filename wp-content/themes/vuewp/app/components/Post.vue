@@ -1,6 +1,6 @@
 <template>
   <div class="mw-100 pa3 pa1-ns vh-50-ns" :class="widthNs">
-    <router-link :to="{ name: 'post', params: { id: item.id } }" class="flex flex-column justify-between-ns cover 0-90 br2 shadow-3 h-100-ns grow" :style="{ 'background-color': color, 'background-image': 'url(' + backgroundImage + ')' }">
+    <router-link :to="{ name: 'post', params: { slug: item.slug } }" class="flex flex-column justify-between-ns cover 0-90 br2 h-100-ns grow" :style="{ 'background-color': color, 'background-image': 'url(' + backgroundImage + ')' }">
       <header class="flex-grow-2 flex items-center pa3 self-center-ns">
         <h2 class="white tc pa1">{{ trimTitle }}</h2>
       </header>
@@ -31,7 +31,7 @@ export default {
 
   data() {
     return {
-      colors: ['#00FBBE', '#F8F8F8', '#E0E0E0', '#DFC360', '#61F8E9', '#252424'],
+      colors: ['#00FBBE', '#E0E0E0', '#DFC360', '#61F8E9', '#252424'],
 
       widths: ['w-third-ns', 'w-two-thirds-ns', 'w-100-ns', 'w-two-thirds-ns', 'w-third-ns', 'w-100-ns']
     }
@@ -68,7 +68,7 @@ export default {
       if (this.item.better_featured_image) {
         return this.item.better_featured_image.source_url
       }
-      
+
       return ''
     },
 

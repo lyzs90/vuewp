@@ -1,4 +1,4 @@
-import PostsService from '../../services/PostsService';
+import PostService from '../../services/PostService';
 import * as types from '../mutation-types';
 
 // initial state
@@ -16,7 +16,7 @@ const getters = {
 // actions
 const actions = {
   getAllPosts({ commit }) {
-    PostsService.get().then(result => {
+    PostService.getAll().then(result => {
       const posts = result.data;
       commit(types.FETCH_POSTS, { posts });
     });
