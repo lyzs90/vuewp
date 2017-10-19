@@ -10,7 +10,7 @@ This solution is trivial to deploy as a Wordpress theme. You can also decouple i
 - [ES6](https://github.com/lukehoban/es6features) °\(^▿^)/°
 - Component-based architecture with [Vue.js](https://vuejs.org/)
 - Dead simple routing with [Vue-router](https://router.vuejs.org/en/essentials/getting-started.html)
-- [Vuex](https://vuex.vuejs.org/en/intro.html/) for state management
+- [Vuex](https://vuex.vuejs.org/en/intro.html) for state management
 - [Webpack](https://webpack.js.org/) for module bundling
 - [Stylus](http://stylus-lang.com/) for CSS preprocessing
 - Simple asset pipeline with [gulp.js](https://gulpjs.com/)
@@ -27,7 +27,7 @@ This solution is trivial to deploy as a Wordpress theme. You can also decouple i
 - Start Wordpress and MySQL `docker-compose up -d`
 - Obtain your docker container ip `docker-machine ip`
 - Add your container ip to `.env.example` and rename to `.env`
-- Access the Wordpress server at this url [http://<container-ip>:8000](http://<container-ip>:8000) and perform the famous 5-minute install
+- Access the Wordpress server at this url [http://container-ip:8000](http://container-ip:8000) and perform the famous 5-minute install
 - Once Wordpress is set up, enable the theme
 - For a better development experience, you should run `npm run dev` to run the Browsersync proxy server and you can access your site at http://localhost:8080, complete with live reloading and other cool stuff.
 
@@ -47,6 +47,6 @@ This solution is trivial to deploy as a Wordpress theme. You can also decouple i
 - [Fakerpress](https://wordpress.org/plugins/fakerpress/)
 
 ## Credits
-- Adapted from [dedakb/vuewp](https://github.com/bedakb/vuewp.git)
+- Adapted from [bedakb/vuewp](https://github.com/bedakb/vuewp.git)
 - Design inspired by [@Radium](https://dribbble.com/shots/3102550-Egloo)
 - Image credits [@MUJI](http://www.muji.com/sg/)
