@@ -18,3 +18,8 @@ wp-content/themes/vuewp/css/custom.css
 wp-content/themes/vuewp/dist/*
 wp-content/themes/vuewp/app/static/*
 .sass-cache/*
+
+# Preinstalled Themes
+wp-content/themes/twentyfifteen/*
+wp-content/themes/twentysixteen/*
+wp-content/themes/twentyseventeen/*
