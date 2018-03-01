@@ -31,10 +31,12 @@ This solution is trivial to deploy as a Wordpress theme. You can also decouple i
 - Once Wordpress is set up, enable the theme
 - For a better development experience, you should run `npm run dev` to run the Browsersync proxy server and you can access your site at http://localhost:8080, complete with live reloading and other cool stuff.
 
+Tips: By default, vuewp will use Media with slug 'bg' as the background. It also uses permalinks of type 'Post name' to render Posts/Pages. So be sure to enable those settings if you want to use vuewp out of the box.
+
 ## Deployment
 
 - Run the production build `npm run prod`
-- View with `gulp brower-sync` and/or some http server eg. `python -m http.server 8080`
+- Preview using a http server like [zeit/serve](https://github.com/zeit/serve) eg. `serve wp-content/themes/vuewp/dist`
 - To use as a theme, simply copy the `vuewp` directory to your Wordpress themes i.e. `/var/www/html/wp-content/themes`
 - For a headless setup, one option is to host the `dist` directory on [S3](http://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html) as a static site.
 
