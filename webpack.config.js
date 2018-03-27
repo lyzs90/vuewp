@@ -16,8 +16,8 @@ module.exports = {
 
   output: {
     path: path.resolve('wp-content/themes/vuewp/dist/js'),
-    filename: '[name].min.js',
-    chunkFilename: '[name].min.js',
+    filename: '[name].[chunkhash].min.js',
+    chunkFilename: '[name].[chunkhash].min.js',
     publicPath: './js/', // relative to dist
   },
 
@@ -58,13 +58,9 @@ module.exports = {
     }),
 
     // Generate new index.html file with script tags
-    // Note: Need to run webpack twice, without this the second time
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'wp-content/themes/vuewp/index.html'),
-      filename: path.resolve(
-        __dirname,
-        'wp-content/themes/vuewp/dist/index.html',
-      ),
+      filename: path.resolve(__dirname, 'wp-content/themes/vuewp/dist/index.html'),
     }),
 
     // Extract common dependencies into an existing entry chunk or an entirely // new chunk

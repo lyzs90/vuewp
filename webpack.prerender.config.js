@@ -1,5 +1,5 @@
 import webpack from 'webpack';
-import HtmlWebpackPlugin from 'html-webpack-plugin';
+import PrerenderSpaPlugin from 'prerender-spa-plugin';
 import path from 'path';
 
 require('dotenv').config();
@@ -58,15 +58,22 @@ module.exports = {
       WP_HOME: `'${process.env.WP_HOME}'`,
     }),
 
-    // Generate new index.html file with script tags
-    new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'wp-content/themes/vuewp/index.html'),
-      filename: path.resolve(__dirname, 'wp-content/themes/vuewp/dist/index.html'),
-    }),
-
     // Extract common dependencies into an existing entry chunk or an entirely // new chunk
     new webpack.optimize.CommonsChunkPlugin({
       name: 'common',
     }),
+
+    // For prerendering routes
+    new PrerenderSpaPlugin(
+      // Absolute path to compiled SPA
+      // @see https://github.com/chrisvfritz/prerender-spa-plugin/issues/108#issuecomment-332134979
+      path.resolve(__dirname, 'wp-content/themes/vuewp/dist'),
+      // List of routes to prerender
+      ['/'],
+      // Advanced options
+      {
+        captureAfterTime: 5000,
+      },
+    ),
   ],
 };

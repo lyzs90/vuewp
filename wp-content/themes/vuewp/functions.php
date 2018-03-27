@@ -117,27 +117,50 @@ function wp_rest_get_categories_links($post){
     $post_categories = array();
     $categories = wp_get_post_terms( $post['id'], 'category', array('fields'=>'all') );
 
-foreach ($categories as $term) {
-    $term_link = get_term_link($term);
-    if ( is_wp_error( $term_link ) ) {
-        continue;
+    foreach ($categories as $term) {
+        $term_link = get_term_link($term);
+        if ( is_wp_error( $term_link ) ) {
+            continue;
+        }
+        $post_categories[] = array('term_id'=>$term->term_id, 'name'=>$term->name, 'link'=>$term_link);
     }
-    $post_categories[] = array('term_id'=>$term->term_id, 'name'=>$term->name, 'link'=>$term_link);
-}
-    return $post_categories;
 
+    return $post_categories;
 }
 
 
 /**
  * Enqueue scripts and styles.
+ *
+ * Webpack uses hashes for filenames to determine if content changed.
+ * So we need to dynamically obtain the filenames when enqueuing
+ * @see https://css-tricks.com/hashes-in-wordpress-assets-with-enqueue/
  */
 function vuewp_scripts() {
-	wp_enqueue_style( 'vuewp-style', get_stylesheet_uri() );
+    $dirJS = new DirectoryIterator(get_stylesheet_directory() . '/dist/js/');
+    $scriptFiles = array();
 
-	wp_enqueue_script( 'vuewp-main', get_template_directory_uri() . '/dist/js/main.min.js', array(), '20151217', true );
-	
-	wp_enqueue_script( 'vuewp-vendor', get_template_directory_uri() . '/dist/js/vendor.min.js', array(), '20151217', true );
+    foreach ($dirJS as $file) {
+        if (pathinfo($file, PATHINFO_EXTENSION) === 'js') {
+            $fullName = basename($file);
+            $name = substr(basename($fullName), 0, strpos(basename($fullName), '.'));
+
+            // Common contains webpackJsonp and must be loaded first
+            if ($name == 'common') {
+                array_unshift($scriptFiles, $fullName);
+                continue;
+            }
+
+            array_push($scriptFiles, $fullName);
+        }
+    }
+
+    foreach ($scriptFiles as $script) {
+        $name = substr(basename($script), 0, strpos(basename($script), '.'));
+        wp_enqueue_script( 'vuewp-' . $name, get_template_directory_uri() . '/dist/js/' . $script, array(), null, true );
+    }
+
+    wp_enqueue_style( 'vuewp-style', get_stylesheet_uri() );
 
 }
 add_action( 'wp_enqueue_scripts', 'vuewp_scripts' );

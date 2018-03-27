@@ -1,6 +1,4 @@
 (() => {
-  'use strict';
-
   /*
   |-----------------------------------------------------------------------------
   | Load Environment Variables
@@ -49,6 +47,7 @@
     distPath: `${themePath}/dist`,
     webpackConfig: './webpack.config.js',
     webpackProdConfig: './webpack.prod.config.js',
+    webpackPrerenderConfig: './webpack.prerender.config.js',
   };
 
   /*
@@ -72,21 +71,6 @@
     });
   });
 
-  /* Proxy the wordpress server i.e. WP theme
-   * Entrypoint: index.php
-   */
-  /*
-  gulp.task("browser-sync", () => {
-    browserSync.init({
-      proxy: `${process.env.WP_HOME}`,
-      port: 8080,
-      open: true,
-      browser: "chrome",
-      notify: false
-    });
-  });
-  */
-
   /*
   |-----------------------------------------------------------------------------
   | Copy Static
@@ -94,13 +78,13 @@
   */
 
   /** Cleanup Dist-Directories before Build */
-  gulp.task('clean', () => {
-    return gulp
+  gulp.task('clean', () =>
+    gulp
       .src([`${otherPaths.distPath}/js`], {
         read: false,
       })
-      .pipe(clean());
-  });
+      .pipe(clean()),
+  );
 
   /*
   |-----------------------------------------------------------------------------
@@ -108,7 +92,13 @@
   |-----------------------------------------------------------------------------
   */
   gulp.task('webpack:build', () => {
-    webpack(require(otherPaths.webpackProdConfig)).pipe(
+    // Prod webpack task
+    webpack(require(otherPaths.webpackProdConfig)).pipe(gulp.dest(`${otherPaths.distPath}/js`));
+  });
+
+  // Prod webpack task webpack task but without index.html generation but with prerendering
+  gulp.task('webpack:prerender', () => {
+    webpack(require(otherPaths.webpackPrerenderConfig)).pipe(
       gulp.dest(`${otherPaths.distPath}/js`),
     );
   });
@@ -129,40 +119,38 @@
   */
 
   /** Linting Sass Code */
-  gulp.task('lint-sass', () => {
-    return gulp
+  gulp.task('lint-sass', () =>
+    gulp
       .src(`${themePath}/sass/style.scss`)
       .pipe(sassLint())
       .pipe(sassLint.format())
-      .pipe(sassLint.failOnError());
-  });
+      .pipe(sassLint.failOnError()),
+  );
 
   /** Compiling and bundeling Sass into single CSS-File */
-  gulp.task('styles', () => {
-    return (
-      gulp
-        .src(`${themePath}/sass/style.scss`)
-        .pipe(
-          plumber(error => {
-            util.log(util.colors.red(error.message));
-            this.emit('end');
-          }),
-        )
-        // Sass
-        .pipe(sass().on('error', sass.logError))
-        // Prefixer, Compression, etc.
-        .pipe(
-          autoprefixer({
-            browsers: ['last 2 versions', 'ie >= 9', 'and_chr >= 2.3'],
-            cascade: false,
-          }),
-        )
-        .pipe(nano())
-        .pipe(rename({ suffix: '.min' }))
-        .pipe(rename('custom.css'))
-        .pipe(gulp.dest(`${themePath}/css/`))
-    );
-  });
+  gulp.task('styles', () =>
+    gulp
+      .src(`${themePath}/sass/style.scss`)
+      .pipe(
+        plumber(error => {
+          util.log(util.colors.red(error.message));
+          this.emit('end');
+        }),
+      )
+      // Sass
+      .pipe(sass().on('error', sass.logError))
+      // Prefixer, Compression, etc.
+      .pipe(
+        autoprefixer({
+          browsers: ['last 2 versions', 'ie >= 9', 'and_chr >= 2.3'],
+          cascade: false,
+        }),
+      )
+      .pipe(nano())
+      .pipe(rename({ suffix: '.min' }))
+      .pipe(rename('custom.css'))
+      .pipe(gulp.dest(`${themePath}/css/`)),
+  );
 
   /*
   |-----------------------------------------------------------------------------
@@ -172,7 +160,7 @@
 
   /** Build Task */
 
-  gulp.task('default', ['styles', 'webpack:build']);
+  gulp.task('default', ['styles', 'webpack:build', 'webpack:prerender']);
 
   gulp.task('dev', ['styles', 'webpack']);
 
