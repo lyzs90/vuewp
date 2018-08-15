@@ -66,7 +66,7 @@
       },
       port: 8080,
       open: true,
-      browser: 'chrome',
+      browser: process.env.DEV_BROWSER,
       notify: false,
     });
   });
